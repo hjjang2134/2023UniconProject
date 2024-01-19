@@ -8,7 +8,6 @@ TagManager:
   - Ball
   - Paddle
   - animals
-  - Plane
   layers:
   - Default
   - TransparentFX
