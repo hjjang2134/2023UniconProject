@@ -154,14 +154,12 @@ Transform:
   m_Children:
   - {fileID: 396058131}
   - {fileID: 564769580}
-  - {fileID: 1107518930}
   - {fileID: 2069710782}
   - {fileID: 1303340386}
+  - {fileID: 1107518930}
   - {fileID: 1424950575}
   m_Father: {fileID: 2082556208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &138963061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 682765316053137628, guid: afe1407867f99d049b0c861ac8038739, type: 3}
@@ -403,7 +401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickParticle: {fileID: 7020608130824943672, guid: 19715969ff3cf474d881193541c3d295, type: 3}
->>>>>>> YJ
 --- !u!1 &396058130
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +412,7 @@ GameObject:
   - component: {fileID: 396058131}
   - component: {fileID: 396058132}
   m_Layer: 0
-  m_Name: Sky_bg
+  m_Name: Asset4u_HD_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,13 +427,8 @@ Transform:
   m_GameObject: {fileID: 396058130}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.2818, y: 1.79, z: -2.5756881}
-  m_LocalScale: {x: 3.4284496, y: 0.25692084, z: 1}
-=======
   m_LocalPosition: {x: -0.166, y: 1.6445, z: -2.5756881}
   m_LocalScale: {x: 3.5458474, y: 0.2720897, z: 1}
->>>>>>> YJ
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 107643892}
@@ -540,7 +532,7 @@ GameObject:
   - component: {fileID: 564769580}
   - component: {fileID: 564769581}
   m_Layer: 0
-  m_Name: Ocean
+  m_Name: Asset4u_HD_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -555,13 +547,8 @@ Transform:
   m_GameObject: {fileID: 564769579}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.2432, y: -4.8262, z: -2.5756881}
-  m_LocalScale: {x: 10.844448, y: 1.2183241, z: 1}
-=======
   m_LocalPosition: {x: -0.233, y: -4.6483, z: -2.5756881}
   m_LocalScale: {x: 10.727523, y: 1.1100699, z: 1}
->>>>>>> YJ
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 107643892}
@@ -1450,7 +1437,7 @@ GameObject:
   - component: {fileID: 1107518930}
   - component: {fileID: 1107518931}
   m_Layer: 0
-  m_Name: Cloud1
+  m_Name: Asset4u_HD_39 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 1107518929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.33, y: 4.31, z: -2.5756881}
+  m_LocalPosition: {x: -7.89, y: 4.23, z: -2.5756881}
   m_LocalScale: {x: 0.7243, y: 0.45431942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1570,7 +1557,7 @@ GameObject:
   - component: {fileID: 1303340386}
   - component: {fileID: 1303340387}
   m_Layer: 0
-  m_Name: Cloud3
+  m_Name: Asset4u_HD_39 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1585,7 +1572,7 @@ Transform:
   m_GameObject: {fileID: 1303340385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.72, y: 4.17, z: -2.5756881}
+  m_LocalPosition: {x: 1.19, y: 4.23, z: -2.5756881}
   m_LocalScale: {x: 0.7243, y: 0.45431942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1830,7 +1817,7 @@ GameObject:
   - component: {fileID: 1424950575}
   - component: {fileID: 1424950576}
   m_Layer: 0
-  m_Name: Cloud4
+  m_Name: Asset4u_HD_39 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1845,7 +1832,7 @@ Transform:
   m_GameObject: {fileID: 1424950574}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.76, y: 3.45, z: -2.5756881}
+  m_LocalPosition: {x: 6.34, y: 3.09, z: -2.5756881}
   m_LocalScale: {x: 0.7243, y: 0.45431942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2311,7 +2298,7 @@ GameObject:
   - component: {fileID: 2069710782}
   - component: {fileID: 2069710783}
   m_Layer: 0
-  m_Name: Cloud2
+  m_Name: Asset4u_HD_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2326,8 +2313,8 @@ Transform:
   m_GameObject: {fileID: 2069710781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.46, y: 3.5899987, z: -2.5756881}
-  m_LocalScale: {x: 0.7243001, y: 0.4543194, z: 1}
+  m_LocalPosition: {x: -3.63, y: 3.09, z: -2.5756881}
+  m_LocalScale: {x: 0.7243, y: 0.45431942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 107643892}
@@ -2372,7 +2359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300078, guid: f6a737996a4a842e58ba28428e71d711, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
