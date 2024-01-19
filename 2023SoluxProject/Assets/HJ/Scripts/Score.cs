@@ -19,7 +19,7 @@ public sealed class Score : MonoBehaviour
 
             _score = value;
 
-            scoreText.SetText($"Score = {_score}");
+            scoreText.SetText($"{_score} / 50");
                 
         }
     }
