@@ -5,24 +5,19 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     public Transform target;
+    private Transform tr;
 
-    public float smoothSpeed = 3;
-    public Vector2 offset;
-    public float limitMinX, limitMaxX, limitMinY, limitMaxY;
-    float cameraHalfWidth, cameraHalfHeight;
+
 
     private void Start()
     {
-        cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
-        cameraHalfHeight = Camera.main.orthographicSize;
+        tr = GetComponent<Transform>();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        Vector3 desiredPosition = new Vector3(
-            Mathf.Clamp(target.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth),   // X
-            Mathf.Clamp(target.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight), // Y
-            -10);                                                                                                  // Z
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
+        tr.position = new Vector3(target.position.x, tr.position.y, tr.position.z);
+
+        tr.LookAt(target);
     }
 }

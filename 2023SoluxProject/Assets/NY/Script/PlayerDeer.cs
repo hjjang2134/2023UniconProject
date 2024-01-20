@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-    public float jump1 = 3f;
-    public float jump2 = 5f;
+    public float jump1 = 1f;
+    public float jump2 = 3f;
     int jumpCount = 0;
-    int speed = 3;
+    public int speed = 2;
 
     public void Jump()
     {
@@ -37,10 +37,12 @@ public class PlayerDeer : MonoBehaviour
 
     void Update()
     {
-        
+        gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+
         if (Input.GetMouseButtonDown(0))
         {
             Jump();
         }
+
     }
 }
