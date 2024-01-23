@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-    public float jump1 = 1f;
-    public float jump2 = 3f;
+    public float jump1 = 3f;
+    public float jump2 = 5f;
     int jumpCount = 0;
     public int speed = 2;
 
