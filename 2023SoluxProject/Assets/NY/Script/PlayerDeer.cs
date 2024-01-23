@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
+<<<<<<< HEAD
     public float jump1 = 3f;
     public float jump2 = 5f;
     int jumpCount = 0;
     public int speed = 2;
+=======
+    public float jump1 = 6f;
+    public float jump2 = 8f;
+    public int jumpCount = 0;
+    public int speed = 4;
+>>>>>>> ny
 
     public void Jump()
     {
@@ -42,6 +49,7 @@ public class PlayerDeer : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Jump();
+            Debug.Log("jump check");
         }
 
     }
