@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform target;
+    private Transform tr;
+
+
+
+    private void Start()
     {
-        
+        tr = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        tr.position = new Vector3(target.position.x, tr.position.y, tr.position.z);
+
+        tr.LookAt(target);
     }
 }
