@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-<<<<<<< HEAD
+
     public float jump1 = 3f;
     public float jump2 = 5f;
     int jumpCount = 0;
     public int speed = 2;
-=======
-    public float jump1 = 6f;
-    public float jump2 = 8f;
-    public int jumpCount = 0;
-    public int speed = 4;
->>>>>>> ny
+
 
     public void Jump()
     {
-        //цЁю╫ а║гагр ╤╖ 
+        //цЁО©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ 
         if (jumpCount == 0)
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump1, 0);
