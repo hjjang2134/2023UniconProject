@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public Transform target;
-    private Transform tr;
+    public Transform player;  // 플레이어의 Transform을 저장할 변수
+    public float smoothSpeed = 0.125f;  // 카메라 이동을 부드럽게 하기 위한 스무딩 계수
 
-
-
-    private void Start()
+    void LateUpdate()
     {
-        tr = GetComponent<Transform>();
-    }
+        if (player != null)
+        {
+            // 플레이어의 현재 X 위치를 가져오기
+            float targetX = player.position.x;
 
-    private void Update()
-    {
-        tr.position = new Vector3(target.position.x, tr.position.y, tr.position.z);
+            // 현재 카메라의 위치와 플레이어의 X 위치를 보간하여 부드럽게 이동
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, new Vector3(targetX, transform.position.y, transform.position.z), smoothSpeed);
 
-        tr.LookAt(target);
+            // 카메라 위치를 업데이트
+            transform.position = smoothedPosition;
+        }
     }
 }
