@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Brick
   - Ball
-  - Paddle
-  - animals
+  - Odd
   layers:
   - Default
   - TransparentFX
