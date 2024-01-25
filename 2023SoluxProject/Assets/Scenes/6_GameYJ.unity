@@ -733,16 +733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5f82d0690be9b49bc1c242f407649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
-  bricks: 32
-  resetDelay: 1
-  txtLives: {fileID: 0}
-  gameOver: {fileID: 0}
-  success: {fileID: 0}
-  bricksPrefab: {fileID: 4711103616326931203, guid: afe1407867f99d049b0c861ac8038739, type: 3}
-  paddle: {fileID: 4685787997978931462, guid: 5eb54506800bb7c49af0d316443f0abc, type: 3}
-  DeathParticles: {fileID: 7020608130824943672, guid: 4eecab3dc8cca99498eaf3b7884791cf, type: 3}
-  clonePaddle: {fileID: 0}
 --- !u!4 &142273284
 Transform:
   m_ObjectHideFlags: 0
