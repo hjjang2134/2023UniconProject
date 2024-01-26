@@ -6,15 +6,21 @@ TagManager:
   tags:
   - Brick
   - Ball
+<<<<<<< HEAD
   - Odd
+=======
+  - Paddle
+  - animals
+  - Plane
+>>>>>>> 4ba4459273b70a1d8b7e4a2a5cd36981c11c0fdf
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - Background
+  - 
   - Obstacle
   - Player
   - 
@@ -41,11 +47,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2762837809
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Obstacle
     uniqueID: 3910005169
