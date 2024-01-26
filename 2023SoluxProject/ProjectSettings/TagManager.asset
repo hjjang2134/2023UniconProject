@@ -6,9 +6,13 @@ TagManager:
   tags:
   - Brick
   - Ball
+<<<<<<< HEAD
+  - Odd
+=======
   - Paddle
   - animals
   - Plane
+>>>>>>> 4ba4459273b70a1d8b7e4a2a5cd36981c11c0fdf
   layers:
   - Default
   - TransparentFX
