@@ -62,8 +62,51 @@ public class Paddle : MonoBehaviour
             if (PausePanel.activeSelf) { PausePanel.SetActive(false); Time.timeScale = 1; }
             else { PausePanel.SetActive(true); Time.timeScale = 0; }
         }
-        if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine("InfinityLoop");
     }
+
+    // 스테이지 초기화 (-1 재시작, 0 다음 스테이지, 숫자 스테이지)
+    public void AllReset(int _stage)
+    {
+        if (_stage == 0) stage++;
+        else if(_stage != -1) stage = _stage;
+        if (stage >= StageStr.Length) return;
+
+
+        BlockGenerator();
+        StartCoroutine("BallReset");
+    }
+
+    // 블럭 생성
+    // 근데 커스텀할 필요 없을 거 같아서 나중에 지울수도 이떠.. 
+    void BlockGenerator()
+    {
+        string currentStr = StageStr[stage].Replace("\n", ""); // 현재 스테이지를 불러옴
+        currentStr = currentStr.Replace(" ", ""); // 띄어쓰기가 있으면 처리함
+        for (int i = 0; i < currentStr.Length; i++)
+        {
+            BlockCol[i].gameObject.SetActive(false); // 블록을 순번대로 불러옴 
+            char A = currentStr[i]; string currentName = "Block"; int currentB = 0;
+
+            if (A == '*') continue;
+            else if (A == '8') { currentB = 8; currentName = "HardBlock0"; }
+            else if (A == '9') currentB = Random.Range(0, 8);
+            else currentB = int.Parse(A.ToString());
+
+            BlockCol[i].gameObject.name = currentName;
+            BlockCol[i].gameObject.GetComponent<SpriteRenderer>().sprite = B[currentB];
+            BlockCol[i].gameObject.SetActive(true);
+        }
+    }
+
+    IEnumerator BallReset()
+    {
+        BallAni[0].SetTrigger("Blink");
+
+        StopCoroutine("InfinityLoop");
+        yield return new WaitForSeconds(0.7f);
+        StartCoroutine("InfinityLoop");
+    }
+
     IEnumerator InfinityLoop()
     {
         while (true)
