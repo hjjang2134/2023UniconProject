@@ -118,7 +118,7 @@ public class Paddle : MonoBehaviour
                 if(!isStart) BallTr[0].position = new Vector2(paddleX, BallTr[0].position.y);
             }
 
-            if(!isStart && Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
+            if(!isStart && (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)))
             {
                 isStart = true;
                 ballSpeed = oldBallSpeed;
@@ -126,5 +126,64 @@ public class Paddle : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f);
         }
+    }
+
+    public IEnumerator BallCollisionEnter2D(Transform ThisBallTr, Rigidbody2D ThisBallRg, Ball ThisBallCs, GameObject Col, Transform ColTr, SpriteRenderer ColSr, Animator ColAni)
+    {
+        if (!isStart) yield break;
+
+        switch (Col.name)
+        {
+            // 패들에 부딪히면 차이값만큼 힘 줌
+            case "Paddle":
+                ThisBallRg.velocity = Vector2.zero;
+                ThisBallRg.AddForce((ThisBallTr.position - transform.position).normalized * ballSpeed);
+                S_Paddle.Play();
+                combo = 0;
+                break;
+
+           case "DeathZone":
+                ThisBallTr.gameObject.SetActive(false);
+                //BallCheck(); // 볼체크
+                break;
+
+            // 돌0에 부딪히면 돌1이 됨
+            case "HardBlock0":
+                Col.name = "HardBlock1";
+                ColSr.sprite = B[9];
+                S_HardBreak.Play();
+                break;
+
+            // 돌1에 부딪히면 돌2이 됨
+            case "HardBlock1":
+                Col.name = "HardBlock2";
+                ColSr.sprite = B[10];
+                S_HardBreak.Play();
+                break;
+
+            // 블럭이나 돌에 부딪히면 부숴짐
+            case "HardBlock2":
+            case "Block":
+                BlockBreak(Col, ColTr, ColAni);
+                break;
+   
+        }
+    }
+
+    void BlockBreak(GameObject Col, Transform ColTr, Animator ColAni)
+    {
+        // 아이템 생성
+        // 스코어 증가
+        // 벽돌 부서지는 애니메이션
+        ColAni.SetTrigger("Break");
+        StartCoroutine(ActiveFalse(Col));
+
+        // 블럭 체크
+    }
+
+    IEnumerator ActiveFalse(GameObject Col)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Col.SetActive(false);
     }
 }

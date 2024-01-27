@@ -15584,7 +15584,7 @@ MonoBehaviour:
   - "\uAC00\uB85C 11\uC5F4 \uC138\uB85C 6\uD589\n* \uBE48\uCE78\n0 \uBE68\uAC15\n1
     \uC8FC\uD669\n2 \uB178\uB791\n3 \uC5F0\uB450\n4 \uD558\uB298\n5 \uD30C\uB791\n6
     \uBCF4\uB77C\n7 \uBD84\uD64D\n8 \uB3CC\n9 \uB79C\uB364"
-  - '***********
+  - '00000000000
 
     00000000000
 
@@ -19862,6 +19862,7 @@ GameObject:
   - component: {fileID: 1127791148}
   - component: {fileID: 1127791147}
   - component: {fileID: 1127791150}
+  - component: {fileID: 1127791151}
   m_Layer: 0
   m_Name: Ball0
   m_TagString: Ball
@@ -20020,6 +20021,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1127791151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127791145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149c29a49bdb94e47969483b33a50f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 616831049}
 --- !u!1 &1129369884
 GameObject:
   m_ObjectHideFlags: 0
@@ -24096,6 +24110,7 @@ GameObject:
   - component: {fileID: 1525796294}
   - component: {fileID: 1525796293}
   - component: {fileID: 1525796296}
+  - component: {fileID: 1525796297}
   m_Layer: 0
   m_Name: Ball2
   m_TagString: Ball
@@ -24254,6 +24269,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1525796297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525796291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149c29a49bdb94e47969483b33a50f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 616831049}
 --- !u!1 &1540621138
 GameObject:
   m_ObjectHideFlags: 0
@@ -24735,6 +24763,7 @@ GameObject:
   - component: {fileID: 1647097929}
   - component: {fileID: 1647097928}
   - component: {fileID: 1647097931}
+  - component: {fileID: 1647097932}
   m_Layer: 0
   m_Name: Ball1
   m_TagString: Ball
@@ -24893,6 +24922,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1647097932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647097926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149c29a49bdb94e47969483b33a50f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 616831049}
 --- !u!1 &1654737294
 GameObject:
   m_ObjectHideFlags: 0
