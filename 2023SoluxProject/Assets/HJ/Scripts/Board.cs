@@ -352,7 +352,7 @@ public class Board : MonoBehaviour
         return false;
     }
 
-    private async Task PopConnectedTiles(List<Tile> connectedTiles)
+    /*private async Task PopConnectedTiles(List<Tile> connectedTiles)
     {
         if (connectedTiles.Count >= 3)
         {
@@ -383,7 +383,56 @@ public class Board : MonoBehaviour
 
             await inflateSequence.Play().AsyncWaitForCompletion();
         }
+    }*/ //진짜코드
+
+    private async Task PopConnectedTiles(List<Tile> connectedTiles)
+    {
+        if (connectedTiles.Count >= 3)
+        {
+            var deflateSequence = DOTween.Sequence();
+            var colors = new Dictionary<Item, int>(); // 각 색깔의 타일 개수를 저장할 딕셔너리
+
+            foreach (var connectedTile in connectedTiles)
+            {
+                deflateSequence.Join(connectedTile.icon.transform.
+                    DOScale(Vector3.zero, TweenDuration));
+
+                // 색깔 별 타일 개수 세기
+                if (!colors.ContainsKey(connectedTile.Item))
+                {
+                    colors[connectedTile.Item] = 1;
+                }
+                else
+                {
+                    colors[connectedTile.Item]++;
+                }
+            }
+
+            audioSource.PlayOneShot(collectSound);
+
+            // 각 색깔 별로 개별적으로 점수 계산
+            foreach (var colorCount in colors)
+            {
+                Score.Instance.AddScore(colorCount.Key, colorCount.Key.value * colorCount.Value);
+            }
+
+            await deflateSequence.Play().AsyncWaitForCompletion();
+
+            var inflateSequence = DOTween.Sequence();
+
+            foreach (var connectedTile in connectedTiles)
+            {
+                connectedTile.Item = ItemDatabase.
+                    Items[Random.Range(0, ItemDatabase.Items.Length)];
+
+                inflateSequence.Join(connectedTile.icon.transform.
+                    DOScale(Vector3.one, TweenDuration));
+            }
+
+            await inflateSequence.Play().AsyncWaitForCompletion();
+        }
     }
+
 
     private int CountSameTilesInDirection(Tile startTile, Vector2 direction)
     {
