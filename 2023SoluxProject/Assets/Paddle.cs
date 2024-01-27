@@ -43,23 +43,45 @@ public class Paddle : MonoBehaviour
     public float paddleX;
     public float ballSpeed;
     float oldBallSpeed = 300;
-    float paddleBorder = 2.262f;    //πŸ≤„¡‡æﬂµ≈
+    float paddleBorder = 9.5f;    //πŸ≤„¡‡æﬂµ≈
     float paddleSize = 1.58f;
     int combo;
     int score;
     int stage;
 
-#if(UNITY_ANDROID)
-    void Awake() { Screen.SetResolution(1170, 540, false); }
+#if (UNITY_ANDROID)
+        void Awake() { Screen.SetResolution(1170, 540, false); }
 #else
     void Awake() { Screen.SetResolution(2340, 1080, false); }
 #endif
+    // µ⁄∑Œ∞°±‚ ≈∞ ¥©∏£∏È ¿œΩ√¡§¡ˆ
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (PausePanel.activeSelf) { PausePanel.SetActive(false); Time.timeScale = 1; }
-            else { PausePanel.SetActive(true);, Time.timeScale = 0; }
+            else { PausePanel.SetActive(true); Time.timeScale = 0; }
+        }
+        if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine("InfinityLoop");
+    }
+    IEnumerator InfinityLoop()
+    {
+        while (true)
+        {
+            if(Input.GetMouseButton(0) || (Input.touchCount==1 && Input.GetTouch(0).phase == TouchPhase.Moved))
+            {
+                paddleX = Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.GetMouseButton(0) ? Input.mousePosition : (Vector3)Input.GetTouch(0).position).x, -paddleBorder, paddleBorder);
+                transform.position = new Vector2(paddleX, transform.position.y);
+                if(!isStart) BallTr[0].position = new Vector2(paddleX, BallTr[0].position.y);
+            }
+
+            if(!isStart && Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended))
+            {
+                isStart = true;
+                ballSpeed = oldBallSpeed;
+                BallRg[0].AddForce(new Vector2(0.1f, 0.9f).normalized*ballSpeed);
+            }
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }
