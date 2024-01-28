@@ -11113,6 +11113,7 @@ GameObject:
   - component: {fileID: 1307833894}
   - component: {fileID: 1307833893}
   - component: {fileID: 1307833892}
+  - component: {fileID: 1307833895}
   m_Layer: 5
   m_Name: GameSuccess
   m_TagString: Untagged
@@ -11223,6 +11224,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307833890}
   m_CullTransparentMesh: 1
+--- !u!111 &1307833895
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307833890}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1330035816
 GameObject:
   m_ObjectHideFlags: 0
