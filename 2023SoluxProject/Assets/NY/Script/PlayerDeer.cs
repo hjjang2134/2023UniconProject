@@ -4,27 +4,22 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-<<<<<<< HEAD
-    public float jump1 = 6f;
-    public float jump2 = 7f;
-    int jumpCount = 0;
-    public int speed = 4;
-=======
+
     public float jump1 = 5.5f;
     public float jump2 = 7f;
     public int jumpCount = 0;
     public int speed = 5;
-    public bool isDie = false; //»ç¸Á ÆÇ´Ü 
+    public bool isDie = false; //ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ 
     public float hp = 100;
     public float maxHP = 100;
-    public bool isWin = false; //½Â¸® ÆÇ´Ü
->>>>>>> ny
+    public bool isWin = false; //ï¿½Â¸ï¿½ ï¿½Ç´ï¿½
+
 
     public void Jump()
     {
         if (isDie != true)
         {
-            //Ã³À½ Á¡ÇÁÇÒ ¶§ 
+            //Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
             if (jumpCount == 0)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump1, 0);
@@ -43,19 +38,19 @@ public class PlayerDeer : MonoBehaviour
     {
         if(collision.gameObject.tag.CompareTo("Plane") == 0)
         {
-            Debug.Log("¿©±â´Â ¶¥");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
             jumpCount = 0;
         }
 
         if (collision.gameObject.tag.CompareTo("Obstacle") == 0)
         {
-            Debug.Log("¾²·¹±â¶û ºÎµúÈû");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½");
             hp -= 7;
         }
 
         if (collision.gameObject.tag.CompareTo("Success") == 0)
         {
-            Debug.Log("¼º°ø");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
             isWin = true;
         }
 
@@ -65,14 +60,14 @@ public class PlayerDeer : MonoBehaviour
     {
         if (collision.gameObject.tag.CompareTo("DeadZone") == 0)
         {
-            Debug.Log("¶³¾îÁø´Ù!");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!");
             isDie = true;
         }
     }
 
     private void Start()
     {
-        maxHP = 100; //ÃÖ´ë Ã¼·Â ÃÊ±âÈ­
+        maxHP = 100; //ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½ ï¿½Ê±ï¿½È­
     }
 
 
@@ -80,7 +75,7 @@ public class PlayerDeer : MonoBehaviour
     {
         if(!isWin && !isDie)
         {
-            //¾ÕÀ¸·Î ³ª¾Æ°¡°í, jump
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½, jump
             gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
 
