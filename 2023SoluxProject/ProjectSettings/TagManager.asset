@@ -9,6 +9,9 @@ TagManager:
   - Paddle
   - animals
   - Plane
+  - DeadZone
+  - Obstacle
+  - Success
   layers:
   - Default
   - TransparentFX
@@ -54,4 +57,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 619377577
+    locked: 0
+  - name: UI
+    uniqueID: 3171288009
     locked: 0
