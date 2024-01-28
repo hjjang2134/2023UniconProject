@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Brick
+  - Ball
+  - Paddle
+  - animals
+  - Plane
+  - DeadZone
+  - Obstacle
+  - Success
+>>>>>>> ny
   layers:
   - Default
   - TransparentFX
@@ -41,3 +53,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+  - name: Background
+    uniqueID: 2762837809
+    locked: 0
+  - name: Obstacle
+    uniqueID: 3910005169
+    locked: 0
+  - name: Player
+    uniqueID: 619377577
+    locked: 0
+  - name: UI
+    uniqueID: 3171288009
+    locked: 0
+>>>>>>> ny
