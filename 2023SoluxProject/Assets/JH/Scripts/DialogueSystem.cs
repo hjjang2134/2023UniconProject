@@ -1,18 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Dialogue : MonoBehaviour
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+public class DialogueSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI txtName;
+    public  TextMeshProUGUI txtSentence;
+
+    Queue<string> sentences = new Queue<string>();
+
+    public void Begin(Dialogue info)
     {
-        
+
+        sentences.Clear();
+
+        txtName.text = info.name;
+
+        foreach(var sentence in info.sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+
+        Next();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Next(){
+        if(sentences.Count == 0)
+        {
+            End();
+            return;
+        }
+
+        txtSentence.text = sentences.Dequeue();
     }
+
+    private void End()
+    {
+        txtSentence.text = string.Empty;
+        SceneManager.LoadScene("3_map");
+    }
+    
 }
+
