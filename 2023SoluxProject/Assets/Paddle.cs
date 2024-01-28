@@ -195,6 +195,8 @@ public class Paddle : MonoBehaviour
     }
 
     // 패들이 아이템과 충돌할 때
+    
+    /*
     void OnTriggerEnter2D(Collider2D col)
     {
         Destroy(col.gameObject);
@@ -255,6 +257,7 @@ public class Paddle : MonoBehaviour
                 break;
         }
     }
+    */
 
     void BlockBreak(GameObject Col, Transform ColTr, Animator ColAni)
     {
@@ -275,6 +278,8 @@ public class Paddle : MonoBehaviour
     }
 
     // 8%의 확률로 아이템이 나옴(아이템이 안 나올 수도 있다)
+   
+    /*
     void ItemGenerator(Vector2 ColTr)
     {
         int rand = Random.Range(0, 10000);
@@ -299,6 +304,7 @@ public class Paddle : MonoBehaviour
             Destroy(Item, 7);
         }
     }
+    */
 
     IEnumerator ActiveFalse(GameObject Col)
     {
