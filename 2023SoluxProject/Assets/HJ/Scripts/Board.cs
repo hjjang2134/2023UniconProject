@@ -79,7 +79,9 @@ public class Board : MonoBehaviour
         // 만약 최대 시도 횟수에 도달했는데도 세 개 이상의 연속된 버블이 없다면 예외 처리 등 필요
     }
 
-    private void CreateInitialBoard()
+    
+
+    public void CreateInitialBoard()
     {
         Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
 
@@ -92,7 +94,7 @@ public class Board : MonoBehaviour
                 tile.x = x;
                 tile.y = y;
 
-                // 아래 랜덤 생성 코드에서 특정 타일이 연속되는지 확인하는 것이 추가되었습니다.
+                // 아래 랜덤 생성 코드에서 특정 타일이 연속되는지 확인
                 do
                 {
                     tile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
@@ -103,7 +105,7 @@ public class Board : MonoBehaviour
         }
     }
 
-    private bool HasConsecutiveBubbles()
+    public bool HasConsecutiveBubbles()
     {
         for (var y = 0; y < height; y++)
         {
