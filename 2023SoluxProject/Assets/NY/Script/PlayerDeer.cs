@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-<<<<<<< HEAD
-    public float jump1 = 6f;
-    public float jump2 = 7f;
-    int jumpCount = 0;
-    public int speed = 4;
-=======
+
     public float jump1 = 5.5f;
     public float jump2 = 7f;
     public int jumpCount = 0;
@@ -18,7 +13,7 @@ public class PlayerDeer : MonoBehaviour
     public float hp = 100;
     public float maxHP = 100;
     public bool isWin = false; //½Â¸® ÆÇ´Ü
->>>>>>> ny
+
 
     public void Jump()
     {
