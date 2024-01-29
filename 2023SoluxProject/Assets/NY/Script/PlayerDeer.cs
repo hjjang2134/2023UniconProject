@@ -9,17 +9,16 @@ public class PlayerDeer : MonoBehaviour
     public float jump2 = 7f;
     public int jumpCount = 0;
     public int speed = 5;
-    public bool isDie = false; //ï¿½ï¿½ï¿?ï¿½Ç´ï¿½ 
+    public bool isDie = false; //die check
     public float hp = 100;
     public float maxHP = 100;
-    public bool isWin = false; //½Â¸® ÆÇ´Ü
+    public bool isWin = false; //win check
 
 
     public void Jump()
     {
         if (isDie != true)
         {
-            //Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
             if (jumpCount == 0)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump1, 0);
@@ -38,19 +37,19 @@ public class PlayerDeer : MonoBehaviour
     {
         if(collision.gameObject.tag.CompareTo("Plane") == 0)
         {
-            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿?ï¿½ï¿½");
+            Debug.Log("plane check");
             jumpCount = 0;
         }
 
         if (collision.gameObject.tag.CompareTo("Obstacle") == 0)
         {
-            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?ï¿½Îµï¿½ï¿½ï¿½");
+            Debug.Log("obstacle check");
             hp -= 7;
         }
 
         if (collision.gameObject.tag.CompareTo("Success") == 0)
         {
-            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
+            Debug.Log("success check");
             isWin = true;
         }
 
@@ -67,7 +66,7 @@ public class PlayerDeer : MonoBehaviour
 
     private void Start()
     {
-        maxHP = 100; //ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½ ï¿½Ê±ï¿½È­
+        maxHP = 100; 
     }
 
 
