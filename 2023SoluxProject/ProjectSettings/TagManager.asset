@@ -45,9 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: sky
+    uniqueID: 2826708027
+    locked: 0
   - name: background
     uniqueID: 336983417
     locked: 0
   - name: obstacle
     uniqueID: 558043681
+    locked: 0
+  - name: player
+    uniqueID: 238084173
     locked: 0
