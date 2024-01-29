@@ -9,6 +9,10 @@ public class GameManagerNY : MonoBehaviour
     public Image bar; //이미지 컴포넌트 가져오기.
     public PlayerDeer player;
 
+    //ui
+    public GameObject g_ui_Success;
+    public GameObject g_ui_GameOver;
+
     NY_STATE gamestate;
     public enum NY_STATE
     {
@@ -17,7 +21,7 @@ public class GameManagerNY : MonoBehaviour
         START,
         PLAY,
         GAMEOVER,
-        GAEWINNING,
+        GAMEWINNING,
         END
     }
 
@@ -41,7 +45,7 @@ public class GameManagerNY : MonoBehaviour
                 gamestate = NY_STATE.NONE;
                 GameOver();
                 break;
-            case NY_STATE.GAEWINNING:
+            case NY_STATE.GAMEWINNING:
                 gamestate = NY_STATE.NONE;
                 GameWinning();
                 break;
@@ -54,7 +58,8 @@ public class GameManagerNY : MonoBehaviour
 
     void GameIntro()
     {
-
+        g_ui_Success.SetActive(false);
+        g_ui_GameOver.SetActive(false);
     }
 
     void GamePlay()
@@ -69,12 +74,12 @@ public class GameManagerNY : MonoBehaviour
 
     void GameWinning()
     {
-
+        g_ui_Success.SetActive(true);
     }
 
     void GameOver()
     {
-        
+        g_ui_GameOver.SetActive(true);
     }
 
     public void GameRestart()
@@ -90,7 +95,11 @@ public class GameManagerNY : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHealthBar();
+        if(gamestate != NY_STATE.GAMEWINNING || gamestate != NY_STATE.GAMEOVER)
+            UpdateHealthBar();
+
+        checkWin();
+        checkGameOver();
     }
 
     void UpdateHealthBar()
@@ -98,21 +107,26 @@ public class GameManagerNY : MonoBehaviour
         // FillAmount 속성을 사용하여 이미지 업데이트
         bar.fillAmount = player.hp / player.maxHP;
 
-     
     }
 
-    // 체력을 감소시키는 함수
  
     public void checkWin()
     {
-        if (player.isDie)
+        if (player.isWin == true)
         {
-            gamestate = NY_STATE.GAMEOVER;
+            gamestate = NY_STATE.GAMEWINNING;
+            Debug.Log("ui_win");
         }
 
-        if (player.isWin)
+    }
+
+    public void checkGameOver()
+    {
+        GameState();
+        if (player.isDie == true)
         {
-            gamestate = NY_STATE.GAEWINNING;
+            gamestate = NY_STATE.GAMEOVER;
+            Debug.Log("ui_lose");
         }
     }
 }

@@ -50,6 +50,7 @@ public class PlayerDeer : MonoBehaviour
         {
             Debug.Log("성공");
             isWin = true;
+            Debug.Log(isWin);
         }
 
 
@@ -60,6 +61,7 @@ public class PlayerDeer : MonoBehaviour
         {
             Debug.Log("떨어진다!");
             isDie = true;
+            Debug.Log(isDie);
         }
     }
 
@@ -71,6 +73,7 @@ public class PlayerDeer : MonoBehaviour
 
     void Update()
     {
+        
         if(!isWin && !isDie)
         {
             //앞으로 나아가고, jump
@@ -83,7 +86,10 @@ public class PlayerDeer : MonoBehaviour
             Debug.Log("jump check");
         }
 
-        hp -= 0.005f;
+        if (hp > 0 && !isDie)
+            hp -= 0.006f;
+        else
+            isDie = true;
 
     }
 }
