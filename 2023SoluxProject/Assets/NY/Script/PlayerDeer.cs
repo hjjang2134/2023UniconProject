@@ -51,6 +51,7 @@ public class PlayerDeer : MonoBehaviour
         {
             Debug.Log("success check");
             isWin = true;
+            Debug.Log(isWin);
         }
 
 
@@ -61,6 +62,7 @@ public class PlayerDeer : MonoBehaviour
         {
             Debug.Log("��������!");
             isDie = true;
+            Debug.Log(isDie);
         }
     }
 
@@ -72,6 +74,7 @@ public class PlayerDeer : MonoBehaviour
 
     void Update()
     {
+        
         if(!isWin && !isDie)
         {
             //������ ���ư���, jump
@@ -83,7 +86,10 @@ public class PlayerDeer : MonoBehaviour
             Jump();
         }
 
-        hp -= 0.005f;
+        if (hp > 0 && !isDie)
+            hp -= 0.006f;
+        else
+            isDie = true;
 
     }
 }
