@@ -15586,24 +15586,35 @@ MonoBehaviour:
     \uBCF4\uB77C\n7 \uBD84\uD64D\n8 \uB3CC\n9 \uB79C\uB364"
   - '***********
 
-    00000000000
+    **0000000**
 
-    00000000000
+    **0000000**
 
-    00000000000
+    **0000000**
 
-    00000000000
+    **0000000**
 
 '
   - '***********
 
-    0*0*0*0*0*0
+    **0*0*0*0**
 
     *0*0*0*0*0*
 
-    0*0*0*0*0*0
+    **0*0*0*0**
 
-    00000000000
+    *0*0*0*0*0*
+
+'
+  - '***********
+
+    ****000****
+
+    ***00000***
+
+    **0000000**
+
+    ***00000***
 
 '
   B:
@@ -15639,6 +15650,7 @@ MonoBehaviour:
   ScoreText: {fileID: 1033128030}
   Life0: {fileID: 257200771}
   Life1: {fileID: 372247634}
+  Life2: {fileID: 936774383}
   WinPanel: {fileID: 258020845}
   GameOverPanel: {fileID: 1708357269}
   PausePanel: {fileID: 858407150}
@@ -17085,15 +17097,15 @@ RectTransform:
   m_GameObject: {fileID: 794661223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.9069583, y: 3.1333, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 4.0122, z: 1.0863227}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1492940261}
   m_Father: {fileID: 973442164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -576, y: 466}
+  m_AnchoredPosition: {x: -568, y: 456}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794661225
@@ -17165,15 +17177,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20784315, g: 0.8470589, b: 0.9058824, a: 1}
+  m_Color: {r: 0.9176471, g: 0.9176471, b: 0.9176471, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 36fe1d766c5df3343b1eb1b5d524afbd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18425,6 +18437,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &936774383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1067471611648731432, guid: 7b79a52fc251b4717ae5c7582bc8deb3, type: 3}
+  m_PrefabInstance: {fileID: 1315139591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &938909294
 GameObject:
   m_ObjectHideFlags: 0
@@ -21559,7 +21576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1067471611648731432, guid: 7b79a52fc251b4717ae5c7582bc8deb3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1315174352888340702, guid: 7b79a52fc251b4717ae5c7582bc8deb3, type: 3}
       propertyPath: m_labelHash
@@ -23701,14 +23718,14 @@ RectTransform:
   m_GameObject: {fileID: 1492940260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.325, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 794661224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4, y: 1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492940262
@@ -23731,7 +23748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1\uB2E8\uACC4"
+  m_text: "\uC2DC\uC791"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67ab97bd3b088484ebf60133c43f17d7, type: 2}
   m_sharedMaterial: {fileID: 8177275542414354577, guid: 67ab97bd3b088484ebf60133c43f17d7, type: 2}
@@ -23740,8 +23757,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281437678
-  m_fontColor: {r: 0.9333334, g: 0.5529412, b: 0.19215688, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -23758,8 +23775,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
