@@ -23,6 +23,7 @@ public class Paddle : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public GameObject Life0;
     public GameObject Life1;
+    public GameObject Life2;
     public GameObject WinPanel;
     public GameObject GameOverPanel;
     public GameObject PausePanel;
@@ -325,7 +326,14 @@ public class Paddle : MonoBehaviour
         // 볼이 하나도 없을 때 라이프 깎임
         if (ballCount == 0)
         {
-            if (Life1.activeSelf)
+            if (Life2.activeSelf)
+            {
+                Life2.SetActive(false);
+                StartCoroutine("BallReset");  // 목숨 하나 날린거니까 전체리셋하면 안된다
+                S_Fail.Play();  // 죽었을 때 효과음
+            }
+
+                else if (Life1.activeSelf)
             {
                 Life1.SetActive(false);
                 StartCoroutine("BallReset");  // 목숨 하나 날린거니까 전체리셋하면 안된다
@@ -369,7 +377,7 @@ public class Paddle : MonoBehaviour
 
     void Clear()
     {
-        for (int i = 0; i < 3; i++) Ball[i].SetActive(false);
+        for (int i = 0; i < 4; i++) Ball[i].SetActive(false);
         PaddleSr.enabled = false;
     }
 }
