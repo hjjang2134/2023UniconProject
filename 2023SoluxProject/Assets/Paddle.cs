@@ -158,6 +158,7 @@ public class Paddle : MonoBehaviour
 
     public IEnumerator BallCollisionEnter2D(Transform ThisBallTr, Rigidbody2D ThisBallRg, Ball ThisBallCs, GameObject Col, Transform ColTr, SpriteRenderer ColSr, Animator ColAni)
     {
+        Physics2D.IgnoreLayerCollision(2, 2);
         if (!isStart) yield break;
 
         switch (Col.name)
@@ -198,8 +199,6 @@ public class Paddle : MonoBehaviour
     }
 
     // 패들이 아이템과 충돌할 때
-    
-    /*
     void OnTriggerEnter2D(Collider2D col)
     {
         Destroy(col.gameObject);
@@ -222,7 +221,7 @@ public class Paddle : MonoBehaviour
             // 7.5초동안 패들이 커짐
             case "Item_Big":
                 paddleSize = 2.42f;
-                paddleBorder = 1.963f;
+                paddleBorder = 1.963f; // 바꿔줘야됨
                 StopCoroutine("Item_BigOrSmall");
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
@@ -230,7 +229,7 @@ public class Paddle : MonoBehaviour
             // 7.5초동안 패들이 작아짐
             case "Item_Small":
                 paddleSize = 0.82f;
-                paddleBorder = 2.521f;
+                paddleBorder = 2.521f;  // 바꿔줘야됨
                 StopCoroutine("Item_BigOrSmall");
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
@@ -260,11 +259,25 @@ public class Paddle : MonoBehaviour
                 break;
         }
     }
-    */
+
+    IEnumerator Item_BigOrSmall(bool skip)
+    {
+        if (!skip)
+        {
+            PaddleSr.size = new Vector2(paddleSize, PaddleSr.size.y);
+            PaddleCol.size = new Vector2(paddleSize, PaddleCol.size.y);
+            yield return new WaitForSeconds(7.5f);
+        }
+        paddleSize = 1.58f;
+        paddleBorder = 2.262f;
+        PaddleSr.size = new Vector2(paddleSize, PaddleSr.size.y);
+        PaddleCol.size = new Vector2(paddleSize, PaddleCol.size.y);
+    }
 
     void BlockBreak(GameObject Col, Transform ColTr, Animator ColAni)
     {
         // 아이템 생성
+        ItemGenerator(ColTr.position);
 
         // 스코어 증가, 콤보당 1점, 3콤보이상은 3점
         score += (++combo > 3) ? 3 : combo;
@@ -281,8 +294,6 @@ public class Paddle : MonoBehaviour
     }
 
     // 8%의 확률로 아이템이 나옴(아이템이 안 나올 수도 있다)
-   
-    /*
     void ItemGenerator(Vector2 ColTr)
     {
         int rand = Random.Range(0, 10000);
@@ -307,7 +318,7 @@ public class Paddle : MonoBehaviour
             Destroy(Item, 7);
         }
     }
-    */
+    
 
     IEnumerator ActiveFalse(GameObject Col)
     {
@@ -315,7 +326,7 @@ public class Paddle : MonoBehaviour
         Col.SetActive(false);
     }
 
-    void BallCheck() // 죽는거 3개니까 계산 잘 해야돼... 
+    GameObject BallCheck() // 죽는거 3개니까 계산 잘 해야돼... 
     {
         int ballCount = 0;
         GameObject ReturnBall = null;
@@ -354,7 +365,15 @@ public class Paddle : MonoBehaviour
                 Clear();
             }
         }
-        // return ReturnBall;
+        return ReturnBall;
+    }
+
+    // ball에 힘을 줌 
+    public void BallAddForce(Rigidbody2D ThisBallRg)
+    {
+        Vector2 dir = ThisBallRg.velocity.normalized;
+        ThisBallRg.velocity = Vector2.zero;
+        ThisBallRg.AddForce(dir * ballSpeed);
     }
 
     // 블럭 체크
