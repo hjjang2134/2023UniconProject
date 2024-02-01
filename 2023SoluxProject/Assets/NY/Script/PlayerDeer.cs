@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerDeer : MonoBehaviour
 {
 
-    public float jump1 = 5.5f;
-    public float jump2 = 7f;
+    public float jump1 = 5.7f;
+    public float jump2 = 6f;
     public int jumpCount = 0;
     public int speed = 5;
     public bool isDie = false; //die check
@@ -44,7 +44,7 @@ public class PlayerDeer : MonoBehaviour
         if (collision.gameObject.tag.CompareTo("Obstacle") == 0)
         {
             Debug.Log("obstacle check");
-            hp -= 7;
+            hp -= 10;
         }
 
         if (collision.gameObject.tag.CompareTo("Success") == 0)
@@ -60,7 +60,7 @@ public class PlayerDeer : MonoBehaviour
     {
         if (collision.gameObject.tag.CompareTo("DeadZone") == 0)
         {
-            Debug.Log("��������!");
+            Debug.Log("die true");
             isDie = true;
             Debug.Log(isDie);
         }
@@ -77,7 +77,6 @@ public class PlayerDeer : MonoBehaviour
         
         if(!isWin && !isDie)
         {
-            //������ ���ư���, jump
             gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
 

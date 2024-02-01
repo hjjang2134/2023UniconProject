@@ -86,13 +86,12 @@ public class GameManagerNY : MonoBehaviour
     {
         gamestate = NY_STATE.START;
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         UpdateHealthBar();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(gamestate != NY_STATE.GAMEWINNING || gamestate != NY_STATE.GAMEOVER)
