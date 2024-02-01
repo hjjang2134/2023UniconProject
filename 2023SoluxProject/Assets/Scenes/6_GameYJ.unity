@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 164601023}
   - component: {fileID: 164601025}
   - component: {fileID: 164601024}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6380,7 +6380,7 @@ GameObject:
   - component: {fileID: 217250943}
   - component: {fileID: 217250942}
   - component: {fileID: 217250941}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball3
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -6416,6 +6416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 616831049}
+  Rg: {fileID: 217250943}
 --- !u!95 &217250942
 Animator:
   serializedVersion: 5
@@ -7007,6 +7008,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &239709888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7881101634340380078, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
+  m_PrefabInstance: {fileID: 3830112705502848183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257200771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1067471611648731432, guid: 7b79a52fc251b4717ae5c7582bc8deb3, type: 3}
@@ -8064,7 +8070,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357890638}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bc21a96c92a9a4d39bc5ad5e613e5403, type: 3}
@@ -8917,7 +8923,7 @@ GameObject:
   - component: {fileID: 393474770}
   - component: {fileID: 393474772}
   - component: {fileID: 393474771}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20242,7 +20248,7 @@ GameObject:
   - component: {fileID: 1127791147}
   - component: {fileID: 1127791150}
   - component: {fileID: 1127791151}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball0
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -20277,7 +20283,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.7
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.02
@@ -20413,6 +20419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 616831049}
+  Rg: {fileID: 1127791147}
 --- !u!1 &1129369884
 GameObject:
   m_ObjectHideFlags: 0
@@ -24569,7 +24576,7 @@ GameObject:
   - component: {fileID: 1525796293}
   - component: {fileID: 1525796296}
   - component: {fileID: 1525796297}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball2
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -24740,6 +24747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 616831049}
+  Rg: {fileID: 1525796293}
 --- !u!1 &1540621138
 GameObject:
   m_ObjectHideFlags: 0
@@ -25219,7 +25227,7 @@ GameObject:
   - component: {fileID: 1636346751}
   - component: {fileID: 1636346753}
   - component: {fileID: 1636346752}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30052,7 +30060,7 @@ GameObject:
   - component: {fileID: 1647097928}
   - component: {fileID: 1647097931}
   - component: {fileID: 1647097932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball1
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -30223,6 +30231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 616831049}
+  Rg: {fileID: 1647097928}
 --- !u!1 &1654737294
 GameObject:
   m_ObjectHideFlags: 0
@@ -30713,7 +30722,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 239709888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708357269 stripped
@@ -32950,7 +32960,7 @@ GameObject:
   - component: {fileID: 2025146699}
   - component: {fileID: 2025146701}
   - component: {fileID: 2025146700}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39364,7 +39374,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1679942994}
     m_Modifications:
     - target: {fileID: 537336689973970358, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
       propertyPath: m_Name
@@ -39388,15 +39398,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881101634340380078, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7881101634340380078, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7881101634340380078, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7881101634340380078, guid: 00430ed562ca3a84c9ae7754cea5c3eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39613,4 +39623,3 @@ SceneRoots:
   - {fileID: 822830682}
   - {fileID: 616831048}
   - {fileID: 142273284}
-  - {fileID: 3830112705502848183}
