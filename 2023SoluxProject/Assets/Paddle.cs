@@ -92,6 +92,7 @@ public class Paddle : MonoBehaviour
         PaddleSr.enabled = true;
         Life0.SetActive(true);
         Life1.SetActive(true);
+        Life2.SetActive(true);
         WinPanel.SetActive(false);
         GameOverPanel.SetActive(false);
     }
@@ -125,6 +126,7 @@ public class Paddle : MonoBehaviour
         Ball[0].SetActive(true);
         Ball[1].SetActive(false);
         Ball[2].SetActive(false);
+        Ball[3].SetActive(false);
         BallAni[0].SetTrigger("Blink");
         BallTr[0].position = new Vector2(paddleX, -2.87f);
 
@@ -333,7 +335,7 @@ public class Paddle : MonoBehaviour
                 S_Fail.Play();  // 죽었을 때 효과음
             }
 
-                else if (Life1.activeSelf)
+            else if (Life1.activeSelf)
             {
                 Life1.SetActive(false);
                 StartCoroutine("BallReset");  // 목숨 하나 날린거니까 전체리셋하면 안된다
