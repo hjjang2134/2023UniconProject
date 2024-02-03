@@ -1,8 +1,5 @@
 // 고칠 것 목록
 
-
-// 목숨 개수 수정
-// 블럭 배치수정..꽉차지 않게
 // 자꾸 오류 나는 애니메이션 수정
 
 
@@ -126,7 +123,7 @@ public class Paddle : MonoBehaviour
         Ball[0].SetActive(true);
         Ball[1].SetActive(false);
         Ball[2].SetActive(false);
-        Ball[3].SetActive(false);
+        // Ball[3].SetActive(false);
         BallAni[0].SetTrigger("Blink");
         BallTr[0].position = new Vector2(paddleX, -2.87f);
 
@@ -171,7 +168,27 @@ public class Paddle : MonoBehaviour
                 combo = 0;
                 break;
 
-           case "DeathZone":
+            // 자석패들에 부딪히면 볼이 자석에 붙어있음
+            case "MagnetPaddle":
+                ThisBallCs.isMagnet = true;
+                ThisBallRg.velocity = Vector2.zero;
+                float gapX = transform.position.x - ThisBallTr.position.x;
+                while (ThisBallCs.isMagnet)
+                {
+                    if (Input.GetMouseButton(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved))
+                        ThisBallTr.position = new Vector2(transform.position.x + gapX, ThisBallTr.position.y);
+
+                    if (gameObject.name == "Paddle" || (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)))
+                    {
+                        ThisBallRg.velocity = Vector2.zero;
+                        ThisBallRg.AddForce((ThisBallTr.position - transform.position).normalized * ballSpeed);
+                        ThisBallCs.isMagnet = false;
+                    }
+                    yield return new WaitForSeconds(0.01f);
+                }
+                break;
+
+            case "DeathZone":
                 ThisBallTr.gameObject.SetActive(false);
                 BallCheck(); // 볼체크
                 break;
@@ -221,7 +238,7 @@ public class Paddle : MonoBehaviour
             // 7.5초동안 패들이 커짐
             case "Item_Big":
                 paddleSize = 2.42f;
-                paddleBorder = 1.963f; // 바꿔줘야됨
+                paddleBorder = 5f; // 바꿔줘야됨
                 StopCoroutine("Item_BigOrSmall");
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
@@ -229,18 +246,18 @@ public class Paddle : MonoBehaviour
             // 7.5초동안 패들이 작아짐
             case "Item_Small":
                 paddleSize = 0.82f;
-                paddleBorder = 2.521f;  // 바꿔줘야됨
+                paddleBorder = 15f;  // 바꿔줘야됨
                 StopCoroutine("Item_BigOrSmall");
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
 
-            // 7.5초동안 볼의 속도가 느려짐
+            // 7.5초동안 볼의 속도가 느려짐(노잼이라 지울수도) 
             case "Item_SlowBall":
                 StopCoroutine("Item_SlowBall");
                 StartCoroutine("Item_SlowBall", false);
                 break;
 
-            // 4초동안 불공이 됨
+            // 4초동안 불공이 됨(노잼이라 지울수도) 
             case "Item_FireBall":
                 StopCoroutine("Item_FireBall");
                 StartCoroutine("Item_FireBall", false);
@@ -274,7 +291,97 @@ public class Paddle : MonoBehaviour
         PaddleCol.size = new Vector2(paddleSize, PaddleCol.size.y);
     }
 
-    void BlockBreak(GameObject Col, Transform ColTr, Animator ColAni)
+    IEnumerator Item_SlowBall(bool skip) // 얜 노잼이라 안나와도 될수있음 
+    {
+        if (!skip)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                ballSpeed = 250;
+                BallAddForce(BallRg[i]);
+            }
+            yield return new WaitForSeconds(7.5f);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            ballSpeed = oldBallSpeed;
+            BallAddForce(BallRg[i]);
+        }
+    }
+    
+    //불공 아이템 실행 근데 노잼이라 지울수도 있음 
+    IEnumerator Item_FireBall(bool skip)
+    {
+        if (!skip)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                BallSr[i].sprite = B[23];
+                ParticleSystem.MainModule PS = BallTr[i].GetChild(0).GetComponent<ParticleSystem>().main;
+                PS.startColor = Color.red;
+            }
+            for (int i = 0; i < BlockCol.Length; i++)
+            {
+                BlockCol[i].tag = "TriggerBlock";
+                BlockCol[i].isTrigger = true;
+            }
+            yield return new WaitForSeconds(4);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            BallSr[i].sprite = B[22];
+            ParticleSystem.MainModule PS = BallTr[i].GetChild(0).GetComponent<ParticleSystem>().main;
+            PS.startColor = Color.white;
+        }
+        for (int i = 0; i < BlockCol.Length; i++)
+        {
+            BlockCol[i].tag = "Untagged";
+            BlockCol[i].isTrigger = false;
+        }
+    }
+
+    // 자석 아이템 설정
+    IEnumerator Item_Magnet(bool skip)
+    {
+        if (!skip)
+        {
+            gameObject.name = "MagnetPaddle";
+            Magnet.SetActive(true);
+            yield return new WaitForSeconds(5.5f);
+            Magnet.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+            Magnet.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            Magnet.SetActive(false);
+            yield return new WaitForSeconds(0.25f);
+            Magnet.SetActive(true);
+            yield return new WaitForSeconds(0.25f);
+            Magnet.SetActive(false);
+            yield return new WaitForSeconds(0.25f);
+            Magnet.SetActive(true);
+            yield return new WaitForSeconds(0.25f);
+        }
+        gameObject.name = "Paddle";
+        Magnet.SetActive(false);
+    }
+
+    IEnumerator Item_Gun(bool skip)
+    {
+        if (!skip)
+        {
+            Gun.SetActive(true);
+            for (int i = 0; i < 12; i++)
+            {
+                Bullet[i * 2].SetActive(true);
+                Bullet[i * 2 + 1].SetActive(true);
+                S_Gun.Play();
+                yield return new WaitForSeconds(0.34f);
+            }
+        }
+        Gun.SetActive(false);
+    }
+
+    public void BlockBreak(GameObject Col, Transform ColTr, Animator ColAni)
     {
         // 아이템 생성
         ItemGenerator(ColTr.position);
@@ -393,12 +500,19 @@ public class Paddle : MonoBehaviour
         }
 
         // 가끔 아이템 흘림
-        // ItemGenerator(new Vector2(Random.Range(-2.05f, 2.05f), 5.17f));
+        ItemGenerator(new Vector2(Random.Range(-10.9f, 10.7f), 5.17f));
     }
-
+    // 승리 또는 게임오버시 호출됨 
     void Clear()
     {
-        for (int i = 0; i < 4; i++) Ball[i].SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine("Item_BigOrSmall", true);
+        StartCoroutine("Item_SlowBall", true);
+        StartCoroutine("Item_FireBall", true);
+        StartCoroutine("Item_Magnet", true);
+        StartCoroutine("Item_Gun", true);
+
+        for (int i = 0; i < 3; i++) Ball[i].SetActive(false);
         PaddleSr.enabled = false;
     }
 }
