@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     float mag;
     GameObject Col;
     public Rigidbody2D Rg;
+    public bool isMagnet;
 
     void Update()
     {
@@ -21,7 +22,6 @@ public class Ball : MonoBehaviour
         
     }
 
-
     void OnCollisionEnter2D(Collision2D col)
     {
         GameObject Col = col.gameObject;
@@ -29,4 +29,9 @@ public class Ball : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Col = col.gameObject;
+        if (Col.CompareTag("TriggerBlock")) paddle.BlockBreak(Col, Col.transform, Col.GetComponent<Animator>());
+    }
 }
