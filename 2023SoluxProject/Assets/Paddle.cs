@@ -25,6 +25,7 @@ public class Paddle : MonoBehaviour
     public GameObject GameOverPanel;
     public GameObject ComboPanel; //콤보 추가
     public GameObject[] Combocol; //콤보 추가
+    public int comboBlockIndex = -1; // 콤보 인뎃스
     public GameObject PausePanel;
     public AudioSource S_Break;
     public AudioSource S_Eat;
@@ -33,7 +34,7 @@ public class Paddle : MonoBehaviour
     public AudioSource S_HardBreak;
     public AudioSource S_Paddle;
     public AudioSource S_Victory;
-    public AudioSource S_Combo// 콤보 소리
+    public AudioSource S_Combo;// 콤보 소리
     public Transform ItemsTr;
     public Transform BlocksTr;
     public BoxCollider2D[] BlockCol;
@@ -245,7 +246,7 @@ public class Paddle : MonoBehaviour
             // 7.5초동안 패들이 커짐
             case "Item_Big":
                 paddleSize = 2.42f;
-                paddleBorder = 10f; // 바꿔줘야됨
+                paddleBorder = 9.5f; // 바꿔줘야됨
                 StopCoroutine("Item_BigOrSmall");
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
@@ -295,7 +296,7 @@ public class Paddle : MonoBehaviour
             yield return new WaitForSeconds(7.5f);
         }
         paddleSize = 1.58f;
-        paddleBorder = 10f;
+        paddleBorder = 9.5f;
         PaddleSr.size = new Vector2(paddleSize, PaddleSr.size.y);
         PaddleCol.size = new Vector2(paddleSize, PaddleCol.size.y);
     }
@@ -397,7 +398,18 @@ public class Paddle : MonoBehaviour
         // 아이템 생성
         ItemGenerator(ColTr.position);
 
-        // 스코어 증가, 콤보당 1점, 3콤보이상은 3점
+        // 추가한 것
+        comboBlockIndex = -1;
+        for (int i = 0; i < BlocksTr.childCount; i++)
+        { 
+            if(BlocksTr.GetChild(i).gameObject == Col)
+            {
+                comboBlockIndex = i;
+            }        
+        }
+
+
+            // 스코어 증가, 콤보당 1점, 3콤보이상은 3점
         score += (++combo > 3) ? 3 : combo;
         ScoreText.text = score.ToString();
 
@@ -408,7 +420,7 @@ public class Paddle : MonoBehaviour
 
         // 블럭 체크
         StopCoroutine("BlockCheck");
-        StartCoroutine("BlockCheck");
+        StartCoroutine("BlockCheck",combo);
     }
 
     // %의 확률로 아이템이 나옴(아이템이 안 나올 수도 있다)
@@ -470,6 +482,7 @@ public class Paddle : MonoBehaviour
             }
             else
             {
+                Life0.SetActive(false);
                 GameOverPanel.SetActive(true);
                 S_Fail.Play();
                 Clear();
@@ -487,20 +500,13 @@ public class Paddle : MonoBehaviour
     }
 
     // 블럭 체크
+    /*
     IEnumerator BlockCheck()
     {
         yield return new WaitForSeconds(0.5f);
         int blockCount = 0;
-        for (int i = 0; i < BlocksTr.childCount; i++) {
-            if (BlocksTr.GetChild(i).gameObject.activeSelf) { 
-                blockCount++;
-                this.combo = combo;
-                if (this.combo > 1)
-                {
-                    Combocol[i].gameObject.SetActive(true);
-                }
-            }
-        }
+        for (int i = 0; i < BlocksTr.childCount; i++)
+            if (BlocksTr.GetChild(i).gameObject.activeSelf) blockCount++;
 
         // 승리
         if (blockCount == 0)
@@ -511,8 +517,76 @@ public class Paddle : MonoBehaviour
         }
 
         // 가끔 아이템 흘림
-        ItemGenerator(new Vector2(Random.Range(-9f, 9f), 4.5f));
+        ItemGenerator(new Vector2(Random.Range(-2.05f, 2.05f), 5.17f));
     }
+    */
+    
+    IEnumerator BlockCheck(int combo)
+    {
+        yield return new WaitForSeconds(0.5f);
+        int blockCount = 0;
+
+        if(comboBlockIndex != -1 && BlocksTr.childCount > comboBlockIndex && BlocksTr.GetChild(comboBlockIndex).gameObject.activeSelf)
+        {
+            blockCount++;
+
+            if (combo > 1)
+            {
+                // Activate only the Combocol corresponding to the block where the combo occurred
+                Combocol[comboBlockIndex].gameObject.SetActive(true);
+                S_Combo.Play();
+                StartCoroutine(DisableComboPanel(Combocol[comboBlockIndex].gameObject));
+            }
+        }
+
+        // Check if all blocks are destroyed
+        bool allBlocksDestroyed = true;
+        for (int i = 0; i < BlocksTr.childCount; i++)
+        {
+            if (BlocksTr.GetChild(i).gameObject.activeSelf)
+            {
+                allBlocksDestroyed = false;
+                break;
+            }
+        }
+
+        /* for (int i = 0; i < BlocksTr.childCount; i++) {
+            if (BlocksTr.GetChild(i).gameObject.activeSelf) { 
+                blockCount++;
+                this.combo = combo;
+                if (this.combo > 1)
+                { 
+                    Combocol[i].gameObject.SetActive(true);
+                    S_Combo.Play();
+                }
+            }
+        }*/
+
+        // 승리
+        if (allBlocksDestroyed && blockCount == 0)
+        {
+            WinPanel.SetActive(true);
+            S_Victory.Play();
+            Clear();
+        }
+        else { 
+        // 가끔 아이템 흘림
+            ItemGenerator(new Vector2(Random.Range(-9f, 9f), 4f));
+            if (combo > 1)
+            {
+                Combocol[comboBlockIndex].gameObject.SetActive(true);
+                S_Combo.Play();
+                StartCoroutine(DisableComboPanel(Combocol[comboBlockIndex].gameObject));
+            }
+        }
+    }
+
+    IEnumerator DisableComboPanel(GameObject comboPanel)
+    {
+        yield return new WaitForSeconds(0.5f);
+        comboPanel.SetActive(false);
+    }
+
     // 승리 또는 게임오버시 호출됨 
     void Clear()
     {
