@@ -27,6 +27,7 @@ public class Paddle : MonoBehaviour
     public GameObject[] Combocol; //콤보 추가
     public int comboBlockIndex = -1; // 콤보 인뎃스
     public GameObject PausePanel;
+    public GameObject yj_EndingPanel; // 엔딩패널
     public AudioSource S_Break;
     public AudioSource S_Eat;
     public AudioSource S_Fail;
@@ -77,9 +78,21 @@ public class Paddle : MonoBehaviour
     // 스테이지 초기화 (-1 재시작, 0 다음 스테이지, 숫자 스테이지)
     public void AllReset(int _stage)
     {
+        Debug.Log("_stage : " +_stage + "/ stage : " + stage);
         if (_stage == 0) stage++;
         else if(_stage != -1) stage = _stage;
-        if (stage >= StageStr.Length) return;
+        
+
+        // 스테이지가 4가 되면 구출 성공 패널 뜸
+        if (stage >= (StageStr.Length)) {
+            if (!yj_EndingPanel.activeSelf)
+            {
+                yj_EndingPanel.SetActive(true);
+                
+            }
+            
+            return;
+        }
 
         Clear();
         BlockGenerator();
@@ -96,6 +109,9 @@ public class Paddle : MonoBehaviour
         Life2.SetActive(true);
         WinPanel.SetActive(false);
         GameOverPanel.SetActive(false);
+
+        
+
     }
 
     // 블럭 생성
@@ -408,8 +424,7 @@ public class Paddle : MonoBehaviour
             }        
         }
 
-
-            // 스코어 증가, 콤보당 1점, 3콤보이상은 3점
+       // 스코어 증가, 콤보당 1점, 3콤보이상은 3점
         score += (++combo > 3) ? 3 : combo;
         ScoreText.text = score.ToString();
 
@@ -500,27 +515,6 @@ public class Paddle : MonoBehaviour
     }
 
     // 블럭 체크
-    /*
-    IEnumerator BlockCheck()
-    {
-        yield return new WaitForSeconds(0.5f);
-        int blockCount = 0;
-        for (int i = 0; i < BlocksTr.childCount; i++)
-            if (BlocksTr.GetChild(i).gameObject.activeSelf) blockCount++;
-
-        // 승리
-        if (blockCount == 0)
-        {
-            WinPanel.SetActive(true);
-            S_Victory.Play();
-            Clear();
-        }
-
-        // 가끔 아이템 흘림
-        ItemGenerator(new Vector2(Random.Range(-2.05f, 2.05f), 5.17f));
-    }
-    */
-    
     IEnumerator BlockCheck(int combo)
     {
         yield return new WaitForSeconds(0.5f);
@@ -549,18 +543,6 @@ public class Paddle : MonoBehaviour
                 break;
             }
         }
-
-        /* for (int i = 0; i < BlocksTr.childCount; i++) {
-            if (BlocksTr.GetChild(i).gameObject.activeSelf) { 
-                blockCount++;
-                this.combo = combo;
-                if (this.combo > 1)
-                { 
-                    Combocol[i].gameObject.SetActive(true);
-                    S_Combo.Play();
-                }
-            }
-        }*/
 
         // 승리
         if (allBlocksDestroyed && blockCount == 0)
@@ -598,11 +580,14 @@ public class Paddle : MonoBehaviour
         StartCoroutine("Item_Gun", true);
 
         // 점수 초기화
-        StageText.text = stage.ToString();
+       /* StageText.text = stage.ToString();
         score = 0;
         ScoreText.text = "0";
+       */
 
         for (int i = 0; i < 3; i++) Ball[i].SetActive(false);
         PaddleSr.enabled = false;
     }
+
+    
 }
