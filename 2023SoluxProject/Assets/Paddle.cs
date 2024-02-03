@@ -23,11 +23,16 @@ public class Paddle : MonoBehaviour
     public GameObject Life2;
     public GameObject WinPanel;
     public GameObject GameOverPanel;
-    public GameObject ComboPanel; //콤보 추가
+
+    public GameObject StartPanel; // start 패널
+    public AudioSource S_start; // 시작 소리
     public GameObject[] Combocol; //콤보 추가
     public int comboBlockIndex = -1; // 콤보 인뎃스
     public GameObject PausePanel;
     public GameObject yj_EndingPanel; // 엔딩패널
+    public AudioSource S_wowwowwow; // 엔딩 소리
+    public AudioSource S_BBGGMM; // 전체 브금
+
     public AudioSource S_Break;
     public AudioSource S_Eat;
     public AudioSource S_Fail;
@@ -60,6 +65,27 @@ public class Paddle : MonoBehaviour
     int score;
     int stage;
 
+    // 3초 문구 뜨고 시작
+    void Start()
+    {
+        // Show the StartPanel
+        S_start.Play();
+        StartPanel.SetActive(true);
+
+        // Use a coroutine to hide the StartPanel after 3 seconds
+        StartCoroutine(HideStartPanel());
+    }
+
+    // 3초 뒤 문구 없어짐
+    IEnumerator HideStartPanel()
+    {
+        yield return new WaitForSeconds(3f);
+
+        // Hide the StartPanel after 3 seconds
+        StartPanel.SetActive(false);
+    }
+
+
 #if (UNITY_ANDROID)
         void Awake() { Screen.SetResolution(1170, 540, false); }
 #else
@@ -70,15 +96,15 @@ public class Paddle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (PausePanel.activeSelf) { PausePanel.SetActive(false); Time.timeScale = 1; }
-            else { PausePanel.SetActive(true); Time.timeScale = 0; }
+            if (PausePanel.activeSelf) { PausePanel.SetActive(false); Time.timeScale = 1; S_BBGGMM.Play(); }
+            else { PausePanel.SetActive(true); Time.timeScale = 0; S_BBGGMM.Stop(); }
         }
     }
 
     // 스테이지 초기화 (-1 재시작, 0 다음 스테이지, 숫자 스테이지)
     public void AllReset(int _stage)
     {
-        Debug.Log("_stage : " +_stage + "/ stage : " + stage);
+        S_BBGGMM.Play();
         if (_stage == 0) stage++;
         else if(_stage != -1) stage = _stage;
         
@@ -87,8 +113,10 @@ public class Paddle : MonoBehaviour
         if (stage >= (StageStr.Length)) {
             if (!yj_EndingPanel.activeSelf)
             {
+                WinPanel.SetActive(false);
                 yj_EndingPanel.SetActive(true);
-                
+                S_BBGGMM.Stop();
+                S_wowwowwow.Play(); 
             }
             
             return;
@@ -144,7 +172,6 @@ public class Paddle : MonoBehaviour
         Ball[0].SetActive(true);
         Ball[1].SetActive(false);
         Ball[2].SetActive(false);
-        // Ball[3].SetActive(false);
         BallAni[0].SetTrigger("Blink");
         BallTr[0].position = new Vector2(paddleX, -2.87f);
 
@@ -189,28 +216,6 @@ public class Paddle : MonoBehaviour
                 S_Paddle.Play();
                 combo = 0;
                 break;
-
-            // 자석패들에 부딪히면 볼이 자석에 붙어있음
-            /*
-            case "MagnetPaddle":
-                ThisBallCs.isMagnet = true;
-                ThisBallRg.velocity = Vector2.zero;
-                float gapX = transform.position.x - ThisBallTr.position.x;
-                while (ThisBallCs.isMagnet)
-                {
-                    if (Input.GetMouseButton(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved))
-                        ThisBallTr.position = new Vector2(transform.position.x + gapX, ThisBallTr.position.y);
-
-                    if (gameObject.name == "Paddle" || (Input.GetMouseButtonUp(0) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)))
-                    {
-                        ThisBallRg.velocity = Vector2.zero;
-                        ThisBallRg.AddForce((ThisBallTr.position - transform.position).normalized * ballSpeed);
-                        ThisBallCs.isMagnet = false;
-                    }
-                    yield return new WaitForSeconds(0.01f);
-                }
-                break;
-            */
 
             case "DeathZone":
                 ThisBallTr.gameObject.SetActive(false);
@@ -275,26 +280,6 @@ public class Paddle : MonoBehaviour
                 StartCoroutine("Item_BigOrSmall", false);
                 break;
 
-        /*
-            // 7.5초동안 볼의 속도가 느려짐(노잼이라 지울수도) 
-            case "Item_SlowBall":
-                StopCoroutine("Item_SlowBall");
-                StartCoroutine("Item_SlowBall", false);
-                break;
-
-            // 4초동안 불공이 됨(노잼이라 지울수도) 
-            case "Item_FireBall":
-                StopCoroutine("Item_FireBall");
-                StartCoroutine("Item_FireBall", false);
-                break;
-
-            // 7.5초동안 자석 활성화
-            case "Item_Magnet":
-                StopCoroutine("Item_Magnet");
-                StartCoroutine("Item_Magnet", false);
-                break;
-            */
-
             // 4초동안 24발의 총알을 발사함
             case "Item_Gun":
                 StopCoroutine("Item_Gun");
@@ -316,82 +301,6 @@ public class Paddle : MonoBehaviour
         PaddleSr.size = new Vector2(paddleSize, PaddleSr.size.y);
         PaddleCol.size = new Vector2(paddleSize, PaddleCol.size.y);
     }
-
-    /*
-    IEnumerator Item_SlowBall(bool skip) // 얜 노잼이라 안나와도 될수있음 
-    {
-        if (!skip)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                ballSpeed = 250;
-                BallAddForce(BallRg[i]);
-            }
-            yield return new WaitForSeconds(7.5f);
-        }
-        for (int i = 0; i < 3; i++)
-        {
-            ballSpeed = oldBallSpeed;
-            BallAddForce(BallRg[i]);
-        }
-    }
-    
-    //불공 아이템 실행 근데 노잼이라 지울수도 있음 
-    IEnumerator Item_FireBall(bool skip)
-    {
-        if (!skip)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                BallSr[i].sprite = B[23];
-                ParticleSystem.MainModule PS = BallTr[i].GetChild(0).GetComponent<ParticleSystem>().main;
-                PS.startColor = Color.red;
-            }
-            for (int i = 0; i < BlockCol.Length; i++)
-            {
-                BlockCol[i].tag = "TriggerBlock";
-                BlockCol[i].isTrigger = true;
-            }
-            yield return new WaitForSeconds(4);
-        }
-        for (int i = 0; i < 3; i++)
-        {
-            BallSr[i].sprite = B[22];
-            ParticleSystem.MainModule PS = BallTr[i].GetChild(0).GetComponent<ParticleSystem>().main;
-            PS.startColor = Color.white;
-        }
-        for (int i = 0; i < BlockCol.Length; i++)
-        {
-            BlockCol[i].tag = "Untagged";
-            BlockCol[i].isTrigger = false;
-        }
-    }
-
-    // 자석 아이템 설정
-    IEnumerator Item_Magnet(bool skip)
-    {
-        if (!skip)
-        {
-            gameObject.name = "MagnetPaddle";
-            Magnet.SetActive(true);
-            yield return new WaitForSeconds(5.5f);
-            Magnet.SetActive(false);
-            yield return new WaitForSeconds(0.5f);
-            Magnet.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            Magnet.SetActive(false);
-            yield return new WaitForSeconds(0.25f);
-            Magnet.SetActive(true);
-            yield return new WaitForSeconds(0.25f);
-            Magnet.SetActive(false);
-            yield return new WaitForSeconds(0.25f);
-            Magnet.SetActive(true);
-            yield return new WaitForSeconds(0.25f);
-        }
-        gameObject.name = "Paddle";
-        Magnet.SetActive(false);
-    }
-    */
 
     IEnumerator Item_Gun(bool skip)
     {
@@ -499,7 +408,9 @@ public class Paddle : MonoBehaviour
             {
                 Life0.SetActive(false);
                 GameOverPanel.SetActive(true);
+                S_BBGGMM.Stop();
                 S_Fail.Play();
+
                 Clear();
             }
         }
@@ -545,7 +456,7 @@ public class Paddle : MonoBehaviour
         }
 
         // 승리
-        if (allBlocksDestroyed && blockCount == 0)
+        if (allBlocksDestroyed && blockCount == 0 && stage < StageStr.Length)
         {
             WinPanel.SetActive(true);
             S_Victory.Play();
