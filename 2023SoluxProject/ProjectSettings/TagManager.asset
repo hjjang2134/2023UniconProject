@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Odd
-  - Ball
-  - TriggerBlock
+
+  - Plane
+  - Obstacle
+  - DeadZone
+  - Success
+  - Jelly
   layers:
   - Default
   - TransparentFX
