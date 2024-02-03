@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlayerDeer : MonoBehaviour
 {
 
-    public float jump1 = 5.7f;
-    public float jump2 = 6f;
+    public float jump1 = 4.8f;
+    public float jump2 = 5f;
     public int jumpCount = 0;
-    public int speed = 5;
+    public int speed = 7;
     public bool isDie = false; //die check
     public float hp = 100;
     public float maxHP = 100;
     public bool isWin = false; //win check
+    public int score = 0;
 
 
     public void Jump()
@@ -52,6 +53,14 @@ public class PlayerDeer : MonoBehaviour
             Debug.Log("success check");
             isWin = true;
             Debug.Log(isWin);
+        }
+
+        if (collision.gameObject.tag.CompareTo("Jelly") == 0)
+        {
+            Debug.Log("Jelly check");
+            score += 10;
+            collision.gameObject.SetActive(false);
+
         }
 
 

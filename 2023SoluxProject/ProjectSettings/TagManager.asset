@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - DeadZone
   - Success
+  - Jelly
   layers:
   - Default
   - TransparentFX
