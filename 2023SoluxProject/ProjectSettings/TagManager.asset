@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+
+  - Plane
+  - Obstacle
+  - DeadZone
+  - Success
+  - Jelly
   layers:
   - Default
   - TransparentFX
@@ -35,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - hey
   - 
   m_SortingLayers:
   - name: Default
