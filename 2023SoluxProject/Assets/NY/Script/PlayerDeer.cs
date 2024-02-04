@@ -80,6 +80,15 @@ public class PlayerDeer : MonoBehaviour
         maxHP = 100; 
     }
 
+    public void Init()
+    {
+        isDie = false;
+        isWin = false;
+        hp = 100;
+        score = 0;
+        transform.localScale = new Vector3(-2.2f, 2.2f, 2.2f);
+
+    }
     public void Move()
     {
         if (!isWin && !isDie)
@@ -91,14 +100,17 @@ public class PlayerDeer : MonoBehaviour
         {
             Jump();
         }
-    }
 
-    void Update()
-    {
         if (hp > 0 && !isDie)
             hp -= 0.006f;
         else
             isDie = true;
+
+    }
+
+    void Update()
+    {
+       
 
     }
 }
