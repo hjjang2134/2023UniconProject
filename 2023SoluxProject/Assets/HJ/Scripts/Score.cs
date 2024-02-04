@@ -37,11 +37,6 @@ using UnityEngine.UI;
 
 public sealed class Score : MonoBehaviour
 {
-    // 예지 추가 시작(2개) : 엔딩 화면 뜨기
-    public GameObject EndingPanel_hj; // 엔딩패널
-    public AudioSource S_wowwowwow; // 엔딩 소리                                 
-    // 예지 변수 추가 끝
-
     public static Score Instance { get; private set; }
 
     private Dictionary<Item, int> colorScores = new Dictionary<Item, int>(); // 각 색깔의 점수를 저장할 딕셔너리
@@ -59,9 +54,6 @@ public sealed class Score : MonoBehaviour
     [SerializeField] public TextMeshProUGUI greenScoreText; 
     [SerializeField] public TextMeshProUGUI blueScoreText; 
     [SerializeField] public TextMeshProUGUI purpleScoreText;
-
-    
-
 
     private void Awake() {
         Instance = this;
@@ -113,17 +105,6 @@ public sealed class Score : MonoBehaviour
     {
         if (RedScore >= 10 && YellowScore >= 10 && GreenScore >= 10 && BlueScore >= 10 && PurpleScore >= 10)
         {
-            // 예지 추가 시작 : 구출 성공 뜨는거
-            if (!EndingPanel_hj.activeSelf)
-            {
-                // WinPanel.SetActive(false);
-                EndingPanel_hj.SetActive(true);
-                // S_BBGGMM.Stop();
-                S_wowwowwow.Play();
-            }
-
-            // 예지 추가 끝
-
             //성공!! 다음으로 넘어가기 버튼
             btn.gameObject.SetActive(true);
         }
