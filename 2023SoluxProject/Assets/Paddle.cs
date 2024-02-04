@@ -406,10 +406,15 @@ public class Paddle : MonoBehaviour
             }
             else
             {
+
+                StageText.text = stage.ToString();
+                score = 0;
+                ScoreText.text = "0";
                 Life0.SetActive(false);
                 GameOverPanel.SetActive(true);
                 S_BBGGMM.Stop();
                 S_Fail.Play();
+
 
                 Clear();
             }
