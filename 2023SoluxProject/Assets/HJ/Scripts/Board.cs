@@ -10,6 +10,10 @@ using Random = UnityEngine.Random;
 
 public class Board : MonoBehaviour
 {
+    // 예지 추가한 변수(2개)
+    public GameObject StartPanel_hj; // start 패널
+    public AudioSource S_start_hj;  // start 소리
+    // 예지 추가 끝
     public static Board Instance { get; private set; }
 
     [SerializeField] private AudioClip collectSound;
@@ -54,6 +58,17 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
+
+        // 여기부터 예지 추가, 시작할 때 3초동안 게임 설명 화면 뜸. 
+        // Show the StartPanel
+        S_start_hj.Play();
+        StartPanel_hj.SetActive(true);
+
+        // Use a coroutine to hide the StartPanel after 3 seconds
+        StartCoroutine(HideStartPanel_hj());
+
+        // 예지 추가 끝
+
         // 무한 루프를 방지하기 위한 최대 시도 횟수
         const int maxTries = 1000;
         int currentTry = 0;
@@ -79,7 +94,17 @@ public class Board : MonoBehaviour
         // 만약 최대 시도 횟수에 도달했는데도 세 개 이상의 연속된 버블이 없다면 예외 처리 등 필요
     }
 
-    
+    // 예지 추가 시작
+    // 3초 뒤 문구 없어짐
+    IEnumerator HideStartPanel_hj()
+    {
+        yield return new WaitForSeconds(3f);
+
+        // Hide the StartPanel after 3 seconds
+        StartPanel_hj.SetActive(false);
+    }
+    // 예지 추가 끝
+
 
     public void CreateInitialBoard()
     {
