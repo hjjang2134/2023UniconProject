@@ -4,31 +4,44 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-
-    public float jump1 = 4.8f;
-    public float jump2 = 5f;
+    public float jump = 5.5f;
     public int jumpCount = 0;
+    public bool isJump = false;
     public int speed = 7;
     public bool isDie = false; //die check
     public float hp = 100;
     public float maxHP = 100;
     public bool isWin = false; //win check
     public int score = 0;
+    public float movePower = 10f;
+
+    Vector3 movement;
+    private Rigidbody2D rigid;
 
 
-    public void Jump()
+    /*public void Jump()
     {
         if (isDie != true)
         {
-            if (jumpCount == 0)
+            if (!isJump)
             {
-                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump1, 0);
-                jumpCount += 1;
+                isJump = true;
+                rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
             }
-            else if (jumpCount == 1)
+        }
+        
+    }*/
+
+    private void FixedUpdate()
+    {
+        //jumpCount <= 2
+        if (rigid != null)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump2, 0);
-                jumpCount = 0;
+                rigid.velocity = Vector2.zero;
+                rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+                jumpCount++;
             }
         }
         
@@ -39,6 +52,7 @@ public class PlayerDeer : MonoBehaviour
         if(collision.gameObject.tag.CompareTo("Plane") == 0)
         {
             Debug.Log("plane check");
+            //isJump = false;
             jumpCount = 0;
         }
 
@@ -55,14 +69,7 @@ public class PlayerDeer : MonoBehaviour
             Debug.Log(isWin);
         }
 
-        if (collision.gameObject.tag.CompareTo("Jelly") == 0)
-        {
-            Debug.Log("Jelly check");
-            score += 10;
-            collision.gameObject.SetActive(false);
-
-        }
-
+       
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,11 +80,20 @@ public class PlayerDeer : MonoBehaviour
             isDie = true;
             Debug.Log(isDie);
         }
+
+        if(collision.gameObject.tag.CompareTo("Jelly") == 0)
+        {
+            Debug.Log("Jelly check");
+            score += 10;
+            collision.gameObject.SetActive(false);
+
+        }
     }
 
     private void Start()
     {
-        maxHP = 100; 
+        maxHP = 100;
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     public void Init()
@@ -87,19 +103,17 @@ public class PlayerDeer : MonoBehaviour
         hp = 100;
         score = 0;
         transform.localScale = new Vector3(-2.2f, 2.2f, 2.2f);
+        transform.position = new Vector3(-8, -2, 0);
 
     }
     public void Move()
     {
-        if (!isWin && !isDie)
-        {
-            gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
-        }
+        Vector3 moveVelocity = Vector3.right;
+        
+        transform.position += moveVelocity * movePower * Time.deltaTime;
+        
+        //gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Jump();
-        }
 
         if (hp > 0 && !isDie)
             hp -= 0.006f;
@@ -110,7 +124,8 @@ public class PlayerDeer : MonoBehaviour
 
     void Update()
     {
-       
+        //if(GameManagerNY.Instance.gamestate == GameManagerNY.NY_STATE.PLAY)
+        Move();
 
     }
 }
