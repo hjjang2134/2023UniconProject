@@ -70,12 +70,17 @@ public sealed class Score : MonoBehaviour
     private void Start()
     {
         // 초기화: 각 색깔의 점수를 0으로 설정
+        ResetScore();
+        //버튼안보이게 
+        btn.gameObject.SetActive(false);
+    }
+    public void ResetScore()
+    {
         foreach (var item in ItemDatabase.Items)
         {
             colorScores[item] = 0;
         }
-        //버튼안보이게 
-        btn.gameObject.SetActive(false);
+        UpdateUI();
     }
 
     public void Update()
@@ -92,6 +97,8 @@ public sealed class Score : MonoBehaviour
         // UI 갱신
         UpdateUI();
     }
+
+    
 
     private int GetColorScore(Item color)
     {
