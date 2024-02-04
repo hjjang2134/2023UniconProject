@@ -4,11 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-
-  - Plane
+  - Undefined
   - Obstacle
-  - DeadZone
-  - Success
+  - Plane
   - Jelly
   layers:
   - Default
@@ -41,9 +39,24 @@ TagManager:
   - 
   - 
   - 
-  - hey
+  - 
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: plane
+    uniqueID: 1403346557
+    locked: 0
+  - name: obstacle
+    uniqueID: 3079804009
+    locked: 0
+  - name: jelly
+    uniqueID: 3456349879
+    locked: 0
+  - name: player
+    uniqueID: 4010248915
+    locked: 0
+  - name: ui
+    uniqueID: 352929721
     locked: 0
