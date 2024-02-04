@@ -86,16 +86,12 @@ public class PlayerDeer : MonoBehaviour
         isWin = false;
         hp = 100;
         score = 0;
-        transform.localScale = new Vector3(-2.2f, 2.2f, 2.2f);
 
     }
     public void Move()
     {
-        if (!isWin && !isDie)
-        {
-            gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
-        }
-
+        gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+    
         if (Input.GetMouseButtonDown(0))
         {
             Jump();

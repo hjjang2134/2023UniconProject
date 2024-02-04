@@ -93,7 +93,7 @@ public class GameManagerNY : MonoBehaviour
     void GameWinning()
     {
         g_ui_SuccessText.SetActive(true);
-
+        gamestate = NY_STATE.NONE;
     }
 
     void GameOver()
