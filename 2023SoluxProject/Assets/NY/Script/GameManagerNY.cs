@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManagerNY : MonoBehaviour
 {
+    public static GameManagerNY Instance;
+
     public Image bar; //이미지 컴포넌트 가져오기.
     public PlayerDeer player;
 
@@ -78,7 +80,6 @@ public class GameManagerNY : MonoBehaviour
 
     void GamePlay()
     {
-        player.Move();
         checkWin();
         checkGameOver();
         UpdateHealthBar();
@@ -111,6 +112,7 @@ public class GameManagerNY : MonoBehaviour
     {
         UpdateHealthBar();
         gamestate = NY_STATE.INTRO;
+        Instance = this;
     }
     
     void Update()
