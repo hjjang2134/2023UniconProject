@@ -1,0 +1,1768 @@
+fileFormatVersion: 2
+guid: 71acdfc1ac4158e48868f605a3f4a026
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Garbage-sorting-set_0
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 5456
+        width: 422
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b38e1b90605944898110d5536799c2
+      internalID: -663280101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_1
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 5672
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b43cc60969a8f4499fa9edcb1a9a6f
+      internalID: 966085056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_2
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 5152
+        width: 718
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecd34ad38024af4f9a9e620a5e82e4c
+      internalID: 1697170369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_3
+      rect:
+        serializedVersion: 2
+        x: 4340
+        y: 5548
+        width: 736
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cbfa798b78b3146ac439c6dd676bee
+      internalID: -323455174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_4
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 5195
+        width: 769
+        height: 734
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84e8a8a2be3dad4888acd95660260a6
+      internalID: -1729649026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_5
+      rect:
+        serializedVersion: 2
+        x: 6873
+        y: 5390
+        width: 594
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffc39aaa63a28b4da8f9de6b740b1dd
+      internalID: -506417989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_6
+      rect:
+        serializedVersion: 2
+        x: 4584
+        y: 5464
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd099a44b11123a409b74b4d60a4cb42
+      internalID: 1659774873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_7
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 4913
+        width: 519
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265dec4a1d23f924d9153b75e285eb68
+      internalID: 93869732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_8
+      rect:
+        serializedVersion: 2
+        x: 4612
+        y: 5359
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b1da03c09ba5b4193d48ac83dd9d7c
+      internalID: 1448437883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_9
+      rect:
+        serializedVersion: 2
+        x: 4654
+        y: 5089
+        width: 477
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77a665cbe0e4c043b20150c4f38f078
+      internalID: -1266469540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_10
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 4831
+        width: 281
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560dcacf71a502644958d24e6e568776
+      internalID: 1578820932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_11
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 5105
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b430d42865584734fbf86bb513f5e65b
+      internalID: 1809111811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_12
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 5117
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c0d8f33bab45b419e2778b4411639f
+      internalID: -1587100752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_13
+      rect:
+        serializedVersion: 2
+        x: 7256
+        y: 4718
+        width: 351
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88134514826a67143b739ef2a9ce2169
+      internalID: 1417841613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_14
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 5069
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3d258ef13260c479a52feb5b79a0ad
+      internalID: -1321781126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_15
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 5050
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14c43b450f1c54498f22c31820f21ae
+      internalID: 1384479017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_16
+      rect:
+        serializedVersion: 2
+        x: 4213
+        y: 4147
+        width: 641
+        height: 860
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b905e86543aee54a82619c2298cdeea
+      internalID: -277103769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_17
+      rect:
+        serializedVersion: 2
+        x: 7147
+        y: 4948
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9684d7654a4b64da1909a1a0954bda
+      internalID: -1993623200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_18
+      rect:
+        serializedVersion: 2
+        x: 7194
+        y: 4973
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b3336105349b945baad48085e7f987
+      internalID: 1023346043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_19
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 4671
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba0581edc784b742a597bb335af0313
+      internalID: -1151568606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_20
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 4003
+        width: 894
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0137d283796587a4c8ae84d67df2eed4
+      internalID: 818569468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_21
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 3987
+        width: 523
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d27f1386f01d8448d84f887b3b8a6c
+      internalID: 962251782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_22
+      rect:
+        serializedVersion: 2
+        x: 3266
+        y: 4509
+        width: 134
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eee72c93922ee44b84c04deaa590f7a
+      internalID: 186725865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_23
+      rect:
+        serializedVersion: 2
+        x: 5592
+        y: 3677
+        width: 757
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dba028bfac82d408280cf317dce112
+      internalID: 371302813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_24
+      rect:
+        serializedVersion: 2
+        x: 7014
+        y: 3933
+        width: 461
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1eb35794a00e64eaa04f09a82d3c39
+      internalID: 1889989688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_25
+      rect:
+        serializedVersion: 2
+        x: 3283
+        y: 4308
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8ac544fec08a94c98ddc6ea637cddf
+      internalID: 1755143497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_26
+      rect:
+        serializedVersion: 2
+        x: 3385
+        y: 3987
+        width: 335
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b650f1642612f1c4e9840d808662fcd8
+      internalID: -1541388253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_27
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 4167
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e476051f69da284284e5a3dde2fc3cb
+      internalID: 370958051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_28
+      rect:
+        serializedVersion: 2
+        x: 4889
+        y: 3983
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4da7c152f64e94eb58241f8d9b712b
+      internalID: -1634286920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_29
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 3871
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d434ae4616bc243a592d6b51940bc0
+      internalID: 984746912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_30
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 3862
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ccb403a5360ad4ca191d8ca65cc4fe
+      internalID: 1500570779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_31
+      rect:
+        serializedVersion: 2
+        x: 4779
+        y: 3620
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1c00b2ff27efe4c87ceca3f304cdad
+      internalID: -1756499655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_32
+      rect:
+        serializedVersion: 2
+        x: 4822
+        y: 3288
+        width: 383
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fce3d4d9078574ca9ac607a6dbad41
+      internalID: -224956716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_33
+      rect:
+        serializedVersion: 2
+        x: 3912
+        y: 3522
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c67964f3a448be4699ece75fcb96968
+      internalID: 660817436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_34
+      rect:
+        serializedVersion: 2
+        x: 7178
+        y: 3339
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150f152fada9db2458927f0b23e9c7d2
+      internalID: -1426924748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_35
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 2573
+        width: 356
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cd0669fb4285b48a5b130ac5f78c01
+      internalID: 338381029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_36
+      rect:
+        serializedVersion: 2
+        x: 3535
+        y: 2868
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4a13124625784458649906a57cdfef
+      internalID: 1144166812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_37
+      rect:
+        serializedVersion: 2
+        x: 3662
+        y: 2714
+        width: 359
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b268bf63417dda347965f27af2068ce3
+      internalID: 711189351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_38
+      rect:
+        serializedVersion: 2
+        x: 5639
+        y: 2612
+        width: 527
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bfc657bdf7ee146859342b9bb47264
+      internalID: -1596514208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_39
+      rect:
+        serializedVersion: 2
+        x: 6248
+        y: 2859
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09926fde8a5b05048b459e1510bf9866
+      internalID: -1047163487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_40
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 2780
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8284a7592951ab14685dc72a47a596a0
+      internalID: 428083248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_41
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 2714
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae3dbe62c824e944afa053a2c64c464
+      internalID: -1143730279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_42
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2671
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cd397bd35147a4cba70d78b27a7772
+      internalID: -1061514818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_43
+      rect:
+        serializedVersion: 2
+        x: 5920
+        y: 2567
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4fa6e7293820041bacb8bdbe6b4374
+      internalID: -73408798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_44
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 2542
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cf9391848417b499c7ccec122fc115
+      internalID: -180452878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_45
+      rect:
+        serializedVersion: 2
+        x: 7022
+        y: 2198
+        width: 234
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56675184504f9741be76b64da8f2ac2
+      internalID: -1447087816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_46
+      rect:
+        serializedVersion: 2
+        x: 4526
+        y: 2516
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080c5f5278d3fd34ea5ece543defe2dd
+      internalID: -183611486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_47
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2209
+        width: 324
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3fd3aa784912a4280996ce23f3181c
+      internalID: -319952889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_48
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 2386
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f23059dc1f1b644fbea01c8d82e4237
+      internalID: -1689460896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_49
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 2395
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517aaed2fd454114b85ad1b2608c3036
+      internalID: -21540897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_50
+      rect:
+        serializedVersion: 2
+        x: 4240
+        y: 1721
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0834b3e3cb71f5b459e2aeba964924a2
+      internalID: -1736094164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_51
+      rect:
+        serializedVersion: 2
+        x: 6275
+        y: 2288
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa997cd06f0555641ab7754bad083c1f
+      internalID: -244682710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_52
+      rect:
+        serializedVersion: 2
+        x: 3847
+        y: 2171
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c649396331896c84d99b37d46936434c
+      internalID: 1516682032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_53
+      rect:
+        serializedVersion: 2
+        x: 3862
+        y: 2174
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f05271c26ec4e742a77477e31be9be8
+      internalID: 2027801846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_54
+      rect:
+        serializedVersion: 2
+        x: 6159
+        y: 2036
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f1d7ef8f866f8458616f06c2c31b5e
+      internalID: 721847608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_55
+      rect:
+        serializedVersion: 2
+        x: 6986
+        y: 1483
+        width: 618
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6484938aeee9b45a59c7f4a52c45b0
+      internalID: 1716606626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_56
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1280
+        width: 604
+        height: 664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9a64be37a200f4bac18ce4075aed1e
+      internalID: 1583563657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_57
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1913
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d761325e4b9b14eaf8129098c690e5
+      internalID: -1647938938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_58
+      rect:
+        serializedVersion: 2
+        x: 6133
+        y: 1817
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb568df4e6df6a4a80dc57f7a20ebe4
+      internalID: -1839445685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_59
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 1791
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bff987f40d1d7d41a6044282ca01d7f
+      internalID: -623655524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_60
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 1760
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848b5ebe0493eed489840a041e3762de
+      internalID: 1226919665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_61
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1030
+        width: 316
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce4792b8c4a63349a9f5cbb2cfe40df
+      internalID: -1021667317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_62
+      rect:
+        serializedVersion: 2
+        x: 2461
+        y: 1618
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb9c365fd0a51a4fa6c92fb3ccb38e7
+      internalID: 167289375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_63
+      rect:
+        serializedVersion: 2
+        x: 2928
+        y: 1623
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e7e5035a299f942aab9bbadf081b9b
+      internalID: -550366580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_64
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 963
+        width: 414
+        height: 734
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccf4a8d06c60e041b4e720874a76673
+      internalID: 1149619318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_65
+      rect:
+        serializedVersion: 2
+        x: 5619
+        y: 1131
+        width: 422
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16570e03a68166e4aa348182dfb6b76c
+      internalID: 1649483456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_66
+      rect:
+        serializedVersion: 2
+        x: 6945
+        y: 1598
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1376c2e2c2b947e40b9629044ebe444b
+      internalID: 1394293677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_67
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 498
+        width: 422
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b95a78860d257469d83b5e5207e351
+      internalID: 1760100766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_68
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 1030
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46792f5d6dea7648ab7f6b5e1fcfacf
+      internalID: -965908236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_69
+      rect:
+        serializedVersion: 2
+        x: 4654
+        y: 995
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b012b8a1d483047b9c74bc37d6ba38
+      internalID: -757770454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_70
+      rect:
+        serializedVersion: 2
+        x: 4693
+        y: 514
+        width: 336
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fb7f43d409c0e41aa944bcf9181e29
+      internalID: -1894434969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_71
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 824
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb10c9e0f3d9824c8ac983d65c7da5a
+      internalID: 2074298233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_72
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 534
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28f1d1ee6c5a8f48aaecb69193c145b
+      internalID: -1815453146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garbage-sorting-set_73
+      rect:
+        serializedVersion: 2
+        x: 5952
+        y: 546
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e181cf4804bf3d4c8252f41eace7b5a
+      internalID: -1556418841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Garbage-sorting-set_0: -663280101
+      Garbage-sorting-set_1: 966085056
+      Garbage-sorting-set_10: 1578820932
+      Garbage-sorting-set_11: 1809111811
+      Garbage-sorting-set_12: -1587100752
+      Garbage-sorting-set_13: 1417841613
+      Garbage-sorting-set_14: -1321781126
+      Garbage-sorting-set_15: 1384479017
+      Garbage-sorting-set_16: -277103769
+      Garbage-sorting-set_17: -1993623200
+      Garbage-sorting-set_18: 1023346043
+      Garbage-sorting-set_19: -1151568606
+      Garbage-sorting-set_2: 1697170369
+      Garbage-sorting-set_20: 818569468
+      Garbage-sorting-set_21: 962251782
+      Garbage-sorting-set_22: 186725865
+      Garbage-sorting-set_23: 371302813
+      Garbage-sorting-set_24: 1889989688
+      Garbage-sorting-set_25: 1755143497
+      Garbage-sorting-set_26: -1541388253
+      Garbage-sorting-set_27: 370958051
+      Garbage-sorting-set_28: -1634286920
+      Garbage-sorting-set_29: 984746912
+      Garbage-sorting-set_3: -323455174
+      Garbage-sorting-set_30: 1500570779
+      Garbage-sorting-set_31: -1756499655
+      Garbage-sorting-set_32: -224956716
+      Garbage-sorting-set_33: 660817436
+      Garbage-sorting-set_34: -1426924748
+      Garbage-sorting-set_35: 338381029
+      Garbage-sorting-set_36: 1144166812
+      Garbage-sorting-set_37: 711189351
+      Garbage-sorting-set_38: -1596514208
+      Garbage-sorting-set_39: -1047163487
+      Garbage-sorting-set_4: -1729649026
+      Garbage-sorting-set_40: 428083248
+      Garbage-sorting-set_41: -1143730279
+      Garbage-sorting-set_42: -1061514818
+      Garbage-sorting-set_43: -73408798
+      Garbage-sorting-set_44: -180452878
+      Garbage-sorting-set_45: -1447087816
+      Garbage-sorting-set_46: -183611486
+      Garbage-sorting-set_47: -319952889
+      Garbage-sorting-set_48: -1689460896
+      Garbage-sorting-set_49: -21540897
+      Garbage-sorting-set_5: -506417989
+      Garbage-sorting-set_50: -1736094164
+      Garbage-sorting-set_51: -244682710
+      Garbage-sorting-set_52: 1516682032
+      Garbage-sorting-set_53: 2027801846
+      Garbage-sorting-set_54: 721847608
+      Garbage-sorting-set_55: 1716606626
+      Garbage-sorting-set_56: 1583563657
+      Garbage-sorting-set_57: -1647938938
+      Garbage-sorting-set_58: -1839445685
+      Garbage-sorting-set_59: -623655524
+      Garbage-sorting-set_6: 1659774873
+      Garbage-sorting-set_60: 1226919665
+      Garbage-sorting-set_61: -1021667317
+      Garbage-sorting-set_62: 167289375
+      Garbage-sorting-set_63: -550366580
+      Garbage-sorting-set_64: 1149619318
+      Garbage-sorting-set_65: 1649483456
+      Garbage-sorting-set_66: 1394293677
+      Garbage-sorting-set_67: 1760100766
+      Garbage-sorting-set_68: -965908236
+      Garbage-sorting-set_69: -757770454
+      Garbage-sorting-set_7: 93869732
+      Garbage-sorting-set_70: -1894434969
+      Garbage-sorting-set_71: 2074298233
+      Garbage-sorting-set_72: -1815453146
+      Garbage-sorting-set_73: -1556418841
+      Garbage-sorting-set_8: 1448437883
+      Garbage-sorting-set_9: -1266469540
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

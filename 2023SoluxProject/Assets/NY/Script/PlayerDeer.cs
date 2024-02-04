@@ -80,11 +80,18 @@ public class PlayerDeer : MonoBehaviour
         maxHP = 100; 
     }
 
-
-    void Update()
+    public void Init()
     {
-        
-        if(!isWin && !isDie)
+        isDie = false;
+        isWin = false;
+        hp = 100;
+        score = 0;
+        transform.localScale = new Vector3(-2.2f, 2.2f, 2.2f);
+
+    }
+    public void Move()
+    {
+        if (!isWin && !isDie)
         {
             gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
@@ -98,6 +105,12 @@ public class PlayerDeer : MonoBehaviour
             hp -= 0.006f;
         else
             isDie = true;
+
+    }
+
+    void Update()
+    {
+       
 
     }
 }

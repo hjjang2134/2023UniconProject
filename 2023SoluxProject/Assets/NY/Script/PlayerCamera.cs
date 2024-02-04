@@ -7,6 +7,7 @@ public class PlayerCamera : MonoBehaviour
     public Transform target;  // 플레이어의 Transform을 저장할 변수
     public float smoothSpeed = 0.125f;  // 카메라 이동을 부드럽게 하기 위한 스무딩 계수
     public PlayerDeer player;
+    public GameManagerNY GameManager;
 
     void LateUpdate()
     {

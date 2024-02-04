@@ -10,10 +10,12 @@ public class GameManagerNY : MonoBehaviour
     public PlayerDeer player;
 
     //ui
-    public GameObject g_ui_Success;
+    public GameObject g_ui_Start;
+    public GameObject g_ui_SuccessText;
     public GameObject g_ui_GameOver;
+    public Text ui_score;
 
-    NY_STATE gamestate;
+    public NY_STATE gamestate;
     public enum NY_STATE
     {
         NONE = 0,
@@ -33,10 +35,11 @@ public class GameManagerNY : MonoBehaviour
                 break;
             case NY_STATE.INTRO:
                 gamestate = NY_STATE.NONE;
-                GameIntro();
+                StartCoroutine(GameIntro());
                 break;
             case NY_STATE.START:
                 gamestate = NY_STATE.NONE;
+                GameStart();
                 break;
             case NY_STATE.PLAY:
                 GamePlay();
@@ -56,14 +59,29 @@ public class GameManagerNY : MonoBehaviour
         }
     }
 
-    void GameIntro()
+    IEnumerator GameIntro()
     {
-        g_ui_Success.SetActive(false);
+        g_ui_Start.SetActive(true);
         g_ui_GameOver.SetActive(false);
+        yield return new WaitForSeconds(3.0f);
+
+        g_ui_Start.SetActive(false);
+        gamestate = NY_STATE.START;
     }
+
+    void GameStart()
+    {
+        player.Init();
+        gamestate = NY_STATE.PLAY;
+    }
+
 
     void GamePlay()
     {
+        player.Move();
+        checkWin();
+        checkGameOver();
+        UpdateHealthBar();
 
     }
 
@@ -74,7 +92,8 @@ public class GameManagerNY : MonoBehaviour
 
     void GameWinning()
     {
-        g_ui_Success.SetActive(true);
+        g_ui_SuccessText.SetActive(true);
+
     }
 
     void GameOver()
@@ -84,21 +103,20 @@ public class GameManagerNY : MonoBehaviour
 
     public void GameRestart()
     {
+        g_ui_GameOver.SetActive(false);
         gamestate = NY_STATE.START;
     }
 
     void Start()
     {
         UpdateHealthBar();
+        gamestate = NY_STATE.INTRO;
     }
     
     void Update()
     {
-        if(gamestate != NY_STATE.GAMEWINNING || gamestate != NY_STATE.GAMEOVER)
-            UpdateHealthBar();
-
-        checkWin();
-        checkGameOver();
+        GameState();
+        ui_score.text = player.score.ToString();
     }
 
     void UpdateHealthBar()
@@ -121,7 +139,6 @@ public class GameManagerNY : MonoBehaviour
 
     public void checkGameOver()
     {
-        GameState();
         if (player.isDie == true)
         {
             gamestate = NY_STATE.GAMEOVER;
