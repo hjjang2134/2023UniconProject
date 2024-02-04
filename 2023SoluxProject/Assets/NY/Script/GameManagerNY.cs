@@ -14,8 +14,9 @@ public class GameManagerNY : MonoBehaviour
     public GameObject g_ui_Success;
     public GameObject g_ui_SuccessText;
     public GameObject g_ui_GameOver;
+    public Text ui_score;
 
-    NY_STATE gamestate;
+    public NY_STATE gamestate;
     public enum NY_STATE
     {
         NONE = 0,
@@ -58,16 +59,24 @@ public class GameManagerNY : MonoBehaviour
         }
     }
 
+    IEnumerator WaitPanel()
+    {
+        yield return new WaitForSeconds(3.0f);
+    }
+
     void GameIntro()
     {
         g_ui_Start.SetActive(true);
         g_ui_Success.SetActive(false);
         g_ui_GameOver.SetActive(false);
+        StartCoroutine(WaitPanel());
+        g_ui_Start.SetActive(false);
 
     }
 
     void GamePlay()
     {
+        player.Move();
 
     }
 
@@ -107,6 +116,7 @@ public class GameManagerNY : MonoBehaviour
     void Start()
     {
         UpdateHealthBar();
+        gamestate = NY_STATE.INTRO;
     }
     
     void Update()
@@ -116,6 +126,7 @@ public class GameManagerNY : MonoBehaviour
 
         checkWin();
         checkGameOver();
+        ui_score.text = player.score.ToString();
     }
 
     void UpdateHealthBar()
