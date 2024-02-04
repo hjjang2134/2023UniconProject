@@ -10,7 +10,9 @@ public class GameManagerNY : MonoBehaviour
     public PlayerDeer player;
 
     //ui
+    public GameObject g_ui_Start;
     public GameObject g_ui_Success;
+    public GameObject g_ui_SuccessText;
     public GameObject g_ui_GameOver;
 
     NY_STATE gamestate;
@@ -58,8 +60,10 @@ public class GameManagerNY : MonoBehaviour
 
     void GameIntro()
     {
+        g_ui_Start.SetActive(true);
         g_ui_Success.SetActive(false);
         g_ui_GameOver.SetActive(false);
+
     }
 
     void GamePlay()
@@ -75,11 +79,24 @@ public class GameManagerNY : MonoBehaviour
     void GameWinning()
     {
         g_ui_Success.SetActive(true);
+        
+    }
+
+    void OnClickNext()
+    {
+        g_ui_Success.SetActive(false);
+        g_ui_SuccessText.SetActive(true);
     }
 
     void GameOver()
     {
         g_ui_GameOver.SetActive(true);
+    }
+
+    void OnClickAgain()
+    {
+        g_ui_GameOver.SetActive(false);
+        gamestate = NY_STATE.INTRO;
     }
 
     public void GameRestart()
