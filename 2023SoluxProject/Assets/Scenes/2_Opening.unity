@@ -2700,11 +2700,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC81C\uAC00 \uAD81\uAE08\uD558\uB2E4\uBA74  \uC800\uC5D0\uAC8C \uB9D0\uC744
+  m_text: "\uC81C\uAC00 \uAD81\uAE08\uD558\uB2E4\uBA74 \uC800\uC5D0\uAC8C \uB9D0\uC744
     \uAC78\uC5B4\uBCF4\uC138\uC694!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f505484ae7b061e46853c02b68d3b219, type: 2}
-  m_sharedMaterial: {fileID: 4894044355911279327, guid: f505484ae7b061e46853c02b68d3b219, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 67ab97bd3b088484ebf60133c43f17d7, type: 2}
+  m_sharedMaterial: {fileID: 8177275542414354577, guid: 67ab97bd3b088484ebf60133c43f17d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

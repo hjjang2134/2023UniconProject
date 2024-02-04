@@ -8,6 +8,10 @@ public class Change : MonoBehaviour
         SceneManager.LoadScene("2_Opening");
     }
 
+     public void SceneChangenick(){
+        SceneManager.LoadScene("2_1Nickname");
+    }
+
     public void SceneChangemap1(){
         SceneManager.LoadScene("4_GameHJ");
     }
