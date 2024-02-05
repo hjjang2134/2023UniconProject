@@ -10,12 +10,10 @@ using Random = UnityEngine.Random;
 
 public class Board : MonoBehaviour
 {
-
     // 예지 추가한 변수(2개)
     public GameObject StartPanel_hj; // start 패널
     public AudioSource S_start_hj;  // start 소리
     // 예지 추가 끝
-
     public static Board Instance { get; private set; }
 
     [SerializeField] private AudioClip collectSound;
@@ -60,6 +58,7 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
+
         // 여기부터 예지 추가, 시작할 때 3초동안 게임 설명 화면 뜸. 
         // Show the StartPanel
         S_start_hj.Play();
@@ -69,7 +68,6 @@ public class Board : MonoBehaviour
         StartCoroutine(HideStartPanel_hj());
 
         // 예지 추가 끝
-
 
         // 무한 루프를 방지하기 위한 최대 시도 횟수
         const int maxTries = 1000;
@@ -109,7 +107,6 @@ public class Board : MonoBehaviour
 
 
     public void CreateInitialBoard()
-
     {
         Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
 
