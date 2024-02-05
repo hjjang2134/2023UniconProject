@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
             case "HardBlock1":
             case "HardBlock2":
                 GameObject Col = col.gameObject;
-                //paddle.BlockBreak(Col, Col.transform, Col.GetComponent<Animator>());
+                paddle.BlockBreak(Col, Col.transform, Col.GetComponent<Animator>());
                 ActiveFalse();
                 break;
             case "Background":

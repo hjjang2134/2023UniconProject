@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 46055006}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &46055004
 Rigidbody2D:
@@ -649,8 +649,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1309,7 +1309,7 @@ GameObject:
   - component: {fileID: 122599115}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,7 +1372,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &122599113
 Rigidbody2D:
@@ -1388,8 +1388,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 143920299}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1740,7 +1740,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &143920297
 Rigidbody2D:
@@ -1756,8 +1756,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8994,7 +8994,7 @@ GameObject:
   - component: {fileID: 299685120}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9057,7 +9057,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &299685118
 Rigidbody2D:
@@ -9073,8 +9073,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9166,7 +9166,7 @@ GameObject:
   - component: {fileID: 331302941}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9229,7 +9229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &331302939
 Rigidbody2D:
@@ -9245,8 +9245,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10079,7 +10079,7 @@ GameObject:
   - component: {fileID: 372854787}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10142,7 +10142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &372854785
 Rigidbody2D:
@@ -10158,8 +10158,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -11139,7 +11139,7 @@ GameObject:
   - component: {fileID: 392744616}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11202,7 +11202,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &392744614
 Rigidbody2D:
@@ -11218,8 +11218,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16377,7 +16377,7 @@ GameObject:
   - component: {fileID: 431093431}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16440,7 +16440,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &431093429
 Rigidbody2D:
@@ -16456,8 +16456,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16785,7 +16785,7 @@ GameObject:
   - component: {fileID: 483570852}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16848,7 +16848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &483570850
 Rigidbody2D:
@@ -16864,8 +16864,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -20003,7 +20003,7 @@ GameObject:
   - component: {fileID: 700458146}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20066,7 +20066,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &700458144
 Rigidbody2D:
@@ -20082,8 +20082,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -21123,7 +21123,7 @@ GameObject:
   - component: {fileID: 782759653}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21186,7 +21186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &782759651
 Rigidbody2D:
@@ -21202,8 +21202,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -22937,7 +22937,7 @@ GameObject:
   - component: {fileID: 911869447}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23000,7 +23000,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &911869445
 Rigidbody2D:
@@ -23016,8 +23016,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -25167,7 +25167,7 @@ GameObject:
   - component: {fileID: 1086870988}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25230,7 +25230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1086870986
 Rigidbody2D:
@@ -25246,8 +25246,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -28134,7 +28134,7 @@ GameObject:
   - component: {fileID: 1304725243}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28197,7 +28197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1304725241
 Rigidbody2D:
@@ -28213,8 +28213,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -31561,7 +31561,7 @@ GameObject:
   - component: {fileID: 1485073445}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31624,7 +31624,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1485073443
 Rigidbody2D:
@@ -31640,8 +31640,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -33658,7 +33658,7 @@ GameObject:
   - component: {fileID: 1627547419}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33721,7 +33721,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1627547417
 Rigidbody2D:
@@ -33737,8 +33737,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -33982,7 +33982,7 @@ GameObject:
   - component: {fileID: 1630872628}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34045,7 +34045,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1630872626
 Rigidbody2D:
@@ -34061,8 +34061,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -39171,7 +39171,7 @@ GameObject:
   - component: {fileID: 1654737299}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39234,7 +39234,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1654737297
 Rigidbody2D:
@@ -39250,8 +39250,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -40292,7 +40292,7 @@ GameObject:
   - component: {fileID: 1729547201}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40355,7 +40355,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1729547199
 Rigidbody2D:
@@ -40371,8 +40371,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -41412,7 +41412,7 @@ GameObject:
   - component: {fileID: 1881881980}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41475,7 +41475,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1881881978
 Rigidbody2D:
@@ -41491,8 +41491,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -41584,7 +41584,7 @@ GameObject:
   - component: {fileID: 1883785853}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41647,7 +41647,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1883785851
 Rigidbody2D:
@@ -41663,8 +41663,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -41756,7 +41756,7 @@ GameObject:
   - component: {fileID: 1907868318}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Odd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41819,7 +41819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &1907868316
 Rigidbody2D:
@@ -41835,8 +41835,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -50987,7 +50987,7 @@ GameObject:
   - component: {fileID: 2134739349}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51050,7 +51050,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &2134739347
 Rigidbody2D:
@@ -51066,8 +51066,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -51311,7 +51311,7 @@ GameObject:
   - component: {fileID: 2146244862}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: TriggerBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51374,7 +51374,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.09}
+  m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &2146244860
 Rigidbody2D:
@@ -51390,8 +51390,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

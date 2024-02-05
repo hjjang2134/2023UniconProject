@@ -8,6 +8,9 @@ TagManager:
   - Obstacle
   - Plane
   - Jelly
+  - TriggerBlock
+  - Ball
+  - Odd
   layers:
   - Default
   - TransparentFX
