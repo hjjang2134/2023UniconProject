@@ -4,47 +4,37 @@ using UnityEngine;
 
 public class PlayerDeer : MonoBehaviour
 {
-    public float jump = 5.5f;
+    public float jump = 5.2f;
     public int jumpCount = 0;
     public bool isJump = false;
-    public int speed = 7;
+    public float speed = 6.5f;
     public bool isDie = false; //die check
     public float hp = 100;
     public float maxHP = 100;
     public bool isWin = false; //win check
     public int score = 0;
-    public float movePower = 10f;
+ 
 
-    Vector3 movement;
+    public GameObject Jelly;
+
     private Rigidbody2D rigid;
 
 
-    /*public void Jump()
+   private void FixedUpdate()
     {
-        if (isDie != true)
+        Move();
+        if (Input.GetMouseButtonDown(0))
         {
-            if (!isJump)
-            {
-                isJump = true;
-                rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+           if (jumpCount < 2) // Jump only if jumpCount is less than 2
+           {
+                    //rigid.velocity = new Vector2(rigid.velocity.x, 0f); // Reset Y velocity before jumping
+                    //rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+               gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump, 0);
+               jumpCount++;
             }
         }
         
-    }*/
-
-    private void FixedUpdate()
-    {
-        //jumpCount <= 2
-        if (rigid != null)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                rigid.velocity = Vector2.zero;
-                rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
-                jumpCount++;
-            }
-        }
-        
+     
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -102,30 +92,26 @@ public class PlayerDeer : MonoBehaviour
         isWin = false;
         hp = 100;
         score = 0;
-        transform.localScale = new Vector3(-2.2f, 2.2f, 2.2f);
         transform.position = new Vector3(-8, -2, 0);
-
     }
     public void Move()
     {
-        Vector3 moveVelocity = Vector3.right;
-        
-        transform.position += moveVelocity * movePower * Time.deltaTime;
-        
-        //gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+        if (GameManagerNY.Instance.gamestate == GameManagerNY.NY_STATE.PLAY)
+        {
+            gameObject.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
 
+            if (hp > 0 && !isDie)
+                hp -= 0.006f;
+            else
+                isDie = true;
 
-        if (hp > 0 && !isDie)
-            hp -= 0.006f;
-        else
-            isDie = true;
+        }
 
     }
 
     void Update()
     {
-        //if(GameManagerNY.Instance.gamestate == GameManagerNY.NY_STATE.PLAY)
-        Move();
+
 
     }
 }
