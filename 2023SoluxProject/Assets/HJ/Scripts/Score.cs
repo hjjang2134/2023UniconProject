@@ -1,34 +1,4 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-
-public sealed class Score : MonoBehaviour
-{
-    public static Score Instance { get; private set; }
-
-    private int _score;
-
-    public int Score_
-    {
-        get => _score;
-
-        set
-        {
-            if (_score == value) return;
-
-            _score = value;
-
-            scoreText.SetText($"{_score} / 50");
-                
-        }
-    }
-
-    [SerializeField] private TextMeshProUGUI scoreText;
-
-    private void Awake() => Instance = this;
-}*/
-
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -41,6 +11,12 @@ public sealed class Score : MonoBehaviour
     public GameObject EndingPanel_hj; // 엔딩패널
     public AudioSource S_wowwowwow; // 엔딩 소리                                 
     // 예지 변수 추가 끝
+
+    public GameObject shine1;
+    public GameObject shine2;
+    public GameObject shine3;
+    public GameObject shine4;
+    public GameObject shine5;
 
     public static Score Instance { get; private set; }
 
@@ -86,6 +62,7 @@ public sealed class Score : MonoBehaviour
     public void Update()
     {
         isClear();
+        isDone();
 
     }
 
@@ -134,6 +111,30 @@ public sealed class Score : MonoBehaviour
             //성공!! 다음으로 넘어가기 버튼
             //btn.gameObject.SetActive(true);
         }
+    }
+    private void isDone()
+    {
+        if (RedScore >= 10)
+        {
+            shine1.SetActive(true);
+        }
+        if (YellowScore >= 10)
+        {
+            shine2.SetActive(true);
+        }
+        if (GreenScore >= 10)
+        {
+            shine3.SetActive(true);
+        }
+        if (BlueScore >= 10)
+        {
+            shine4.SetActive(true);
+        }
+        if (PurpleScore >= 10)
+        {
+            shine5.SetActive(true);
+        }
+
     }
 
 
