@@ -39,7 +39,7 @@ public class DialogueSystem : MonoBehaviour
     private void End()
     {
         txtSentence.text = string.Empty;
-        SceneManager.LoadScene("3_map");
+        SceneManager.LoadScene("8_Credit");
     }
     
 }

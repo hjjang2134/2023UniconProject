@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Ending : MonoBehaviour
     private RectTransform creditsTransform;
     private bool isMousePressed = false;
     public float stopYPosition = 6355f;
-    public GameObject Go_Main;
+    public Button btn;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class Ending : MonoBehaviour
         }
         else
         {
-            Go_Main.SetActive(true);
+            btn.interactable = true;
         }
     }
 

@@ -13,6 +13,12 @@ public class Change : MonoBehaviour
         SceneManager.LoadScene("2_Opening");
     }
 
+    public void SceneChangeMap()
+    {
+        SceneManager.LoadScene("3_Map");
+    }
+
+
     public void SceneChangemap1(){
         SceneManager.LoadScene("4_GameHJ");
     }
@@ -28,5 +34,10 @@ public class Change : MonoBehaviour
     public void SceneChangeEnding()
     {
         SceneManager.LoadScene("7_Ending");
+    }
+
+    public void SceneChangeCredit()
+    {
+        SceneManager.LoadScene("8_Credit");
     }
 }
