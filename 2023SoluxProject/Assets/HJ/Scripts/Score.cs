@@ -72,7 +72,7 @@ public sealed class Score : MonoBehaviour
         // 초기화: 각 색깔의 점수를 0으로 설정
         ResetScore();
         //버튼안보이게 
-        btn.gameObject.SetActive(false);
+        //btn.gameObject.SetActive(false);
     }
     public void ResetScore()
     {
@@ -132,7 +132,7 @@ public sealed class Score : MonoBehaviour
             // 예지 추가 끝
 
             //성공!! 다음으로 넘어가기 버튼
-            btn.gameObject.SetActive(true);
+            //btn.gameObject.SetActive(true);
         }
     }
 
