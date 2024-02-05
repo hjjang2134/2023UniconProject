@@ -1534,6 +1534,7 @@ GameObject:
   - component: {fileID: 1268068997}
   - component: {fileID: 1268068996}
   - component: {fileID: 1268068995}
+  - component: {fileID: 1268068998}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -1615,6 +1616,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1268068998
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268068994}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c0f5786f639278d479c9da914217fdad, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1291053723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,13 +2356,15 @@ MonoBehaviour:
     name: EcoBao
     sentences:
     - "\uC5B4\uC11C\uC624\uC138\uC694! \uC5EC\uAE30\uB294 \uC5D0\uCF54\uC6D4\uB4DC\uC785\uB2C8\uB2E4! "
-    - "\uD3C9\uD654\uB85C\uC6CC \uBCF4\uC774\uB294 \uC5D0\uCF54\uC6D4\uB4DC\uC9C0\uB9CC
-      \uC0AC\uC2E4 \uAC00\uC18D\uD654\uB41C \uD658\uACBD\uC624\uC5FC\uC73C\uB85C
-      \uC5EC\uB7EC \uB3D9\uBB3C\uB4E4\uC774 \uC704\uD5D8\uC5D0 \uCC98\uD574 \uC788\uC2B5\uB2C8\uB2E4..."
+    - "\uAE68\uB057\uD558\uACE0 \uD3C9\uD654\uB85C\uC6E0\uB358 \uC5D0\uCF54\uC6D4\uB4DC\uB294
+      \uC0AC\uB77C\uC9C0\uACE0"
+    - "\uAC00\uC18D\uD654\uB41C \uD658\uACBD\uC624\uC5FC\uC73C\uB85C \uC5EC\uB7EC
+      \uB3D9\uBB3C\uB4E4\uC774 \uC704\uD5D8\uC5D0 \uBE60\uC84C\uC2B5\uB2C8\uB2E4..."
     - "\uC6A9\uC0AC\uB2D8\uAED8\uC11C \uC55E\uC73C\uB85C \uC138\uAC1C\uC758 \uC2A4\uD14C\uC774\uC9C0\uB97C
-      \uD074\uB9AC\uC5B4\uD558\uC154\uC11C \uC138 \uB9C8\uB9AC\uC758 \uB3D9\uBB3C\uC744
-      \uAD6C\uCD9C\uD558\uC154\uC57C \uD569\uB2C8\uB2E4!"
-    - "\uC6A9\uC0AC\uB2D8!, \uC800\uD76C\uB97C \uB3C4\uC640\uC8FC\uC2E4 \uAC70\uC8E0?"
+      \uD074\uB9AC\uC5B4\uD558\uC154\uC11C"
+    - "\uC704\uD5D8\uC5D0 \uBE60\uC9C4 \uB3D9\uBB3C\uB4E4\uC744 \uAD6C\uCD9C\uD558\uC154\uC57C
+      \uD569\uB2C8\uB2E4!"
+    - "\uC6A9\uC0AC\uB2D8! \uC800\uD76C\uB97C \uB3C4\uC640\uC8FC\uC2E4 \uAC70\uC8E0?"
     - "\uB3D9\uBB3C\uB4E4\uC744 \uAD6C\uD558\uAE30 \uC704\uD55C \uBAA8\uD5D8, \uC774\uC81C
       \uC2DC\uC791\uD574\uBD10\uC694!"
 --- !u!1 &1504055507
