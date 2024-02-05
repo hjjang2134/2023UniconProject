@@ -14,6 +14,8 @@ public class LogoScaleAnimation : MonoBehaviour
 
     private void Start()
     {
+        Screen.SetResolution(2340, 1080, true);
+
         if (targetImage == null)
         {
             Debug.LogError("Target image not assigned. Please assign the UI Image in the Inspector.");

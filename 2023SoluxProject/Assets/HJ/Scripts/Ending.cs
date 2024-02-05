@@ -14,6 +14,7 @@ public class Ending : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(2340, 1080, true);
         creditsTransform = ending.GetComponent<RectTransform>();
     }
 

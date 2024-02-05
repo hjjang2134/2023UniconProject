@@ -129,6 +129,7 @@ public class GameManagerNY : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(2340, 1080, true);
         UpdateHealthBar();
         gamestate = NY_STATE.INTRO;
         Instance = this;

@@ -36,7 +36,7 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
-
+        Screen.SetResolution(2340, 1080, true);
         // 여기부터 예지 추가, 시작할 때 3초동안 게임 설명 화면 뜸. 
         // Show the StartPanel
         S_start_hj.Play();
