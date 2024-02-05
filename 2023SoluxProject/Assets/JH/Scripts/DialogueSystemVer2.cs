@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-public class DialogueSystem1 : MonoBehaviour
+
+public class DialogueSystemVer2 : MonoBehaviour
 {
-    public TextMeshProUGUI txtName;
+     public TextMeshProUGUI txtName;
     public  TextMeshProUGUI txtSentence;
 
     Queue<string> sentences = new Queue<string>();
@@ -41,6 +42,4 @@ public class DialogueSystem1 : MonoBehaviour
         txtSentence.text = string.Empty;
         SceneManager.LoadScene("8_Credit");
     }
-    
 }
-
