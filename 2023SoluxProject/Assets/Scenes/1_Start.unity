@@ -1435,6 +1435,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578270827}
   m_CullTransparentMesh: 1
+--- !u!1 &592817955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592817957}
+  - component: {fileID: 592817956}
+  m_Layer: 0
+  m_Name: LogoManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &592817956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592817955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4c2974e99494fc7b6c054e8b16d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 1126966096}
+  startScale: 1
+  endScale: 1.5
+  animationDuration: 0.5
+--- !u!4 &592817957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592817955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735754286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1780,7 @@ GameObject:
   - component: {fileID: 950605228}
   - component: {fileID: 950605227}
   m_Layer: 0
-  m_Name: MusicManger
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2279,8 +2327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: 230}
-  m_SizeDelta: {x: 1200, y: 600}
+  m_AnchoredPosition: {x: 3, y: 215.5}
+  m_SizeDelta: {x: 1230.99, y: 629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126966096
 MonoBehaviour:
@@ -3203,7 +3251,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1501776608}
-  - {fileID: 1126966095}
   - {fileID: 1412579592}
   - {fileID: 531740828}
   - {fileID: 174271520}
@@ -3241,6 +3288,7 @@ RectTransform:
   - {fileID: 417595026}
   - {fileID: 292788289}
   - {fileID: 1128729018}
+  - {fileID: 1126966095}
   - {fileID: 1414421376}
   - {fileID: 1807634682}
   m_Father: {fileID: 94562762}
@@ -3972,3 +4020,4 @@ SceneRoots:
   - {fileID: 1329994287}
   - {fileID: 109990248}
   - {fileID: 950605230}
+  - {fileID: 592817957}
