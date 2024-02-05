@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem1 : MonoBehaviour
 {
     public TextMeshProUGUI txtName;
     public  TextMeshProUGUI txtSentence;
@@ -39,7 +39,7 @@ public class DialogueSystem : MonoBehaviour
     private void End()
     {
         txtSentence.text = string.Empty;
-        SceneManager.LoadScene("3_Map");
+        SceneManager.LoadScene("8_Credit");
     }
     
 }
