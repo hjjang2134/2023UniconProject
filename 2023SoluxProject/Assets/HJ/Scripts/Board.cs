@@ -34,29 +34,6 @@ public class Board : MonoBehaviour
 
     private void Awake() => Instance = this;
 
-    /*private void Start()
-    {
-        Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
-
-
-        for (var y=0; y<height; y++)
-        {
-            for(var x=0; x<width; x++)
-            {
-
-                var tile = rows[y].tiles[x];
-
-                tile.x = x;
-                tile.y = y;
-
-                tile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
-
-                Tiles[x, y] = tile;
-            }
-        }
-        //Pop();
-    }*/
-
     private void Start()
     {
 
@@ -92,7 +69,6 @@ public class Board : MonoBehaviour
             }
         } while (currentTry < maxTries);
 
-        // 만약 최대 시도 횟수에 도달했는데도 세 개 이상의 연속된 버블이 없다면 예외 처리 등 필요
     }
 
     // 예지 추가 시작
@@ -164,15 +140,6 @@ public class Board : MonoBehaviour
     }
 
 
-
-    /*private void Update()
-    {
-        if (!Input.GetKeyDown(KeyCode.A)) return;
-
-        foreach (var connectedTile in Tiles[0, 0].GetConnectedTiles())
-            connectedTile.icon.transform.DOScale(1.25f, TweenDuration).Play();
-    }*/
-
     public async void Select(Tile tile)
     {
         if (!_selection.Contains(tile))
@@ -241,19 +208,6 @@ public class Board : MonoBehaviour
         tile1.Item = tile2.Item;
         tile2.Item = tile1Item;
     }
-    /*private bool CanPop()
-    {
-        for(var y=0; y<height; y++)
-        {
-            for (var x=0; x < width; x++)
-            {
-                if (Tiles[x, y].GetConnectedTiles().Skip(1).Count() >= 2) 
-                    return true;
-            }
-        }
-        return false;
-
-    }*/
 
     private bool CanPop()
     {
@@ -286,52 +240,6 @@ public class Board : MonoBehaviour
         return (tile1.Item == tile2.Item && tile2.Item == tile3.Item);
     }
 
-
-    /*private async Task Pop()
-    {
-        for(var y=0; y<height; y++)
-        {
-            for(var x=0; x<width; x++)
-            {
-                var tile = Tiles[x, y];
-
-                var connectedTiles = tile.GetConnectedTiles();
-
-                if (connectedTiles.Skip(1).Count() < 2) continue;
-
-                var deflateSequence = DOTween.Sequence();
-
-                foreach(var connectedTile in connectedTiles)
-                {
-                    deflateSequence.Join(connectedTile.icon.transform.
-                        DOScale(Vector3.zero, TweenDuration));
-
-                }
-
-                audioSource.PlayOneShot(collectSound);
-
-                Score.Instance.Score_ += tile.Item.value * connectedTiles.Count;
-
-                await deflateSequence.Play().AsyncWaitForCompletion();
-
-                var inflateSequence = DOTween.Sequence();
-
-                foreach(var connectedTile in connectedTiles)
-                {
-                    connectedTile.Item = ItemDatabase.
-                        Items[Random.Range(0, ItemDatabase.Items.Length)];
-
-                    inflateSequence.Join(connectedTile.icon.transform.
-                        DOScale(Vector3.one, TweenDuration));
-
-
-                }
-                await inflateSequence.Play().AsyncWaitForCompletion();
-
-                x = 0; y = 0;
-            }
-        }
-    }*/
 
     private async Task<bool> Pop()
     {
@@ -382,38 +290,7 @@ public class Board : MonoBehaviour
         return false;
     }
 
-    /*private async Task PopConnectedTiles(List<Tile> connectedTiles)
-    {
-        if (connectedTiles.Count >= 3)
-        {
-            var deflateSequence = DOTween.Sequence();
-
-            foreach (var connectedTile in connectedTiles)
-            {
-                deflateSequence.Join(connectedTile.icon.transform.
-                    DOScale(Vector3.zero, TweenDuration));
-            }
-
-            audioSource.PlayOneShot(collectSound);
-
-            Score.Instance.Score_ += connectedTiles[0].Item.value * connectedTiles.Count;
-
-            await deflateSequence.Play().AsyncWaitForCompletion();
-
-            var inflateSequence = DOTween.Sequence();
-
-            foreach (var connectedTile in connectedTiles)
-            {
-                connectedTile.Item = ItemDatabase.
-                    Items[Random.Range(0, ItemDatabase.Items.Length)];
-
-                inflateSequence.Join(connectedTile.icon.transform.
-                    DOScale(Vector3.one, TweenDuration));
-            }
-
-            await inflateSequence.Play().AsyncWaitForCompletion();
-        }
-    }*/ //진짜코드
+    
 
     private async Task PopConnectedTiles(List<Tile> connectedTiles)
     {
