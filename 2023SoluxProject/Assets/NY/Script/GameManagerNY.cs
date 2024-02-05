@@ -79,6 +79,7 @@ public class GameManagerNY : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
 
         g_ui_Start.SetActive(false);
+        S_bgm.Play();
         gamestate = NY_STATE.START;
     }
 
@@ -91,7 +92,7 @@ public class GameManagerNY : MonoBehaviour
 
     void GamePlay()
     {
-        S_bgm.Play();
+        
         Debug.Log(gamestate);
         checkWin();
         checkGameOver();
