@@ -1467,7 +1467,7 @@ MonoBehaviour:
   targetImage: {fileID: 1126966096}
   startScale: 1
   endScale: 1.5
-  animationDuration: 0.5
+  animationDuration: 1
 --- !u!4 &592817957
 Transform:
   m_ObjectHideFlags: 0
