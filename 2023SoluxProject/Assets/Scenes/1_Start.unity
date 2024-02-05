@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 1126966096}
   startScale: 1
-  endScale: 1.5
+  endScale: 1.3
   animationDuration: 1
 --- !u!4 &592817957
 Transform:
