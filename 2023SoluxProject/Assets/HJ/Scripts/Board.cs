@@ -13,6 +13,7 @@ public class Board : MonoBehaviour
     // 예지 추가한 변수(2개)
     public GameObject StartPanel_hj; // start 패널
     public AudioSource S_start_hj;  // start 소리
+    public AudioSource S_game_hj;
     // 예지 추가 끝
     public static Board Instance { get; private set; }
 
@@ -102,6 +103,8 @@ public class Board : MonoBehaviour
 
         // Hide the StartPanel after 3 seconds
         StartPanel_hj.SetActive(false);
+
+        S_game_hj.Play();
     }
     // 예지 추가 끝
 
