@@ -11,6 +11,9 @@ public class GameManagerNY : MonoBehaviour
     public Image bar; //이미지 컴포넌트 가져오기.
     public PlayerDeer player;
 
+    public string jellyTag = "Jelly";
+    //public GameObject[] allJellyObjects;
+
     //ui
     public GameObject g_ui_Start;
     public GameObject g_ui_SuccessText;
@@ -106,6 +109,7 @@ public class GameManagerNY : MonoBehaviour
     {
         g_ui_GameOver.SetActive(false);
         gamestate = NY_STATE.START;
+        ActivateAllJellyObjects();
     }
 
     void Start()
@@ -113,12 +117,14 @@ public class GameManagerNY : MonoBehaviour
         UpdateHealthBar();
         gamestate = NY_STATE.INTRO;
         Instance = this;
+
     }
     
     void Update()
     {
         GameState();
         ui_score.text = player.score.ToString();
+
     }
 
     void UpdateHealthBar()
@@ -147,4 +153,14 @@ public class GameManagerNY : MonoBehaviour
             Debug.Log("ui_lose");
         }
     }
+
+    void ActivateAllJellyObjects()
+    {
+        for(int i = 1; i <= player.score / 10; i++)
+        {
+            GameObject.Find("JellyParent").transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
+
+
 }

@@ -13,9 +13,6 @@ public class PlayerDeer : MonoBehaviour
     public float maxHP = 100;
     public bool isWin = false; //win check
     public int score = 0;
- 
-
-    public GameObject Jelly;
 
     private Rigidbody2D rigid;
 
@@ -23,18 +20,21 @@ public class PlayerDeer : MonoBehaviour
    private void FixedUpdate()
     {
         Move();
-        if (Input.GetMouseButtonDown(0))
-        {
-           if (jumpCount < 2) // Jump only if jumpCount is less than 2
-           {
-                    //rigid.velocity = new Vector2(rigid.velocity.x, 0f); // Reset Y velocity before jumping
-                    //rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
-               gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump, 0);
-               jumpCount++;
-            }
-        }
+        Jump();
         
      
+    }
+
+    public void Jump()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (jumpCount < 2) // Jump only if jumpCount is less than 2
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump, 0);
+                jumpCount++;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,6 +80,7 @@ public class PlayerDeer : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         maxHP = 100;
@@ -93,7 +94,9 @@ public class PlayerDeer : MonoBehaviour
         hp = 100;
         score = 0;
         transform.position = new Vector3(-8, -2, 0);
+        
     }
+
     public void Move()
     {
         if (GameManagerNY.Instance.gamestate == GameManagerNY.NY_STATE.PLAY)
