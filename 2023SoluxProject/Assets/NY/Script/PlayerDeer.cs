@@ -29,11 +29,9 @@ public class PlayerDeer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (jumpCount < 2) // Jump only if jumpCount is less than 2
-            {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, jump, 0);
                 jumpCount++;
-            }
+            
         }
     }
 
