@@ -12,7 +12,6 @@ public class GameManagerNY : MonoBehaviour
     public PlayerDeer player;
 
     public string jellyTag = "Jelly";
-    //public GameObject[] allJellyObjects;
 
     //ui
     public GameObject g_ui_Start;
@@ -20,7 +19,14 @@ public class GameManagerNY : MonoBehaviour
     public GameObject g_ui_GameOver;
     public Text ui_score;
 
+    //audio
+    public AudioSource S_start;
+    public AudioSource S_wowwow;
+    public AudioSource S_bgm;
+    public AudioSource S_GameOver;
+
     public NY_STATE gamestate;
+
     public enum NY_STATE
     {
         NONE = 0,
@@ -68,6 +74,8 @@ public class GameManagerNY : MonoBehaviour
     {
         g_ui_Start.SetActive(true);
         g_ui_GameOver.SetActive(false);
+        S_start.Play();
+        Debug.Log(gamestate);
         yield return new WaitForSeconds(3.0f);
 
         g_ui_Start.SetActive(false);
@@ -83,10 +91,12 @@ public class GameManagerNY : MonoBehaviour
 
     void GamePlay()
     {
+        S_bgm.Play();
+        Debug.Log(gamestate);
         checkWin();
         checkGameOver();
         UpdateHealthBar();
-
+        
     }
 
     void GameEnd()
@@ -98,11 +108,15 @@ public class GameManagerNY : MonoBehaviour
     {
         g_ui_SuccessText.SetActive(true);
         gamestate = NY_STATE.NONE;
+        S_bgm.Stop();
+        S_wowwow.Play();
     }
 
     void GameOver()
     {
         g_ui_GameOver.SetActive(true);
+        S_bgm.Stop();
+        S_GameOver.Play();
     }
 
     public void GameRestart()
@@ -154,7 +168,7 @@ public class GameManagerNY : MonoBehaviour
         }
     }
 
-    void ActivateAllJellyObjects()
+    void ActivateAllJellyObjects() //jelly reSetActive
     {
         for(int i = 1; i <= player.score / 10; i++)
         {
